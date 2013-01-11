@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<installation version="1.0">
+	<info>
+		<appname>${project.name}</appname>
+		<appversion>${project.version}</appversion>
+		<url>http://nesi.org.nz</url>
+		<authors>
+			<author name="Markus Binsteiner" email="m.binsteiner@auckland.ac.nz" />
+		</authors>
+		<javaversion>1.6</javaversion>
+		<run-privileged condition="izpack.windowsinstall|izpack.macinstall" />
+	</info>
+	<guiprefs height="400" resizable="no" width="640">
+		<modifier key="useButtonIcons" value="yes" />
+		<modifier key="useLabelIcons" value="no" />
+		<modifier key="labelGap" value="2" />
+		<modifier key="layoutAnchor" value="NORTHWEST" />
+		<modifier key="useHeadingPanel" value="no" />
+		<modifier key="headingImageOnLeft" value="yes" />
+		<modifier key="headingLineCount" value="1" />
+		<modifier key="headingFontSize" value="1.5" />
+		<modifier key="headingBackgroundColor" value="0x00ffffff" />
+		<modifier key="headingPanelCounter" value="progressbar" />
+		<modifier key="headingPanelCounterPos" value="inNavigationPanel" />
+	</guiprefs>
+	<locale>
+		<langpack iso3="eng" />
+	</locale>
+	<resources>
+		<!-- <res id="LicencePanel.licence" src="izpack/resources/Licence.txt" 
+			/> -->
+		<!-- <res id="HTMLHelloPanel.info" src="izpack/resources/Readme.html" /> -->
+		<!-- <res id="IZPackLogo" src="izpack/resources/logo-medium.png" /> -->
+		<!-- <res id="Installer.image" src="izpack/resources/installer_image.jpg" 
+			/> -->
+		<res id="TargetPanel.dir.windows" src="windows/TargetDirWindows.txt" />
+		<res id="TargetPanel.dir.unix" src="linux/TargetDirUnix.txt" />
+		<res id="TargetPanel.dir.macosx" src="mac/TargetDirMac.txt" />
+
+		<res id="shortcutSpec.xml" src="windows/shortcutSpec.xml" />
+		<res id="Unix_shortcutSpec.xml" src="linux/unix_shortcut_spec.xml" />
+		
+<!-- 		<res id="RegistrySpec.xml" src="windows/RegistrySpec.xml"/> -->
+		
+	</resources>
+
+	<native type="izpack" name="ShellLink.dll">
+		<os family="windows" />
+	</native>
+	<native type="izpack" name="ShellLink_x64.dll">
+		<os family="windows" />
+	</native>
+	<native type="3rdparty" name="COIOSHelper.dll" stage="both">
+   	 	<os family="windows"/>
+	</native>
+
+	<variables>
+		<variable name="InstallerFrame.logfilePath" value="Default" />
+		<variable name="WELCOME_TEXT" value="CLIENT_NAME" />
+		<variable name="WELCOME_VERSION" value="VERSION_TOKEN" />
+	</variables>
+
+
+	<panels>
+
+		<panel classname="TargetPanel" id="install_dir"/>
+		<panel classname="PacksPanel" id="sdk_pack_select" />
+		<panel classname="InstallPanel" id="install" />
+		<panel classname="ShortcutPanel" id="shortcutpanel" >
+			<actions>
+			<action stage="preactivate"
+			classname="com.opentext.installer.actions.RegistryWriterAction">
+			<os family="windows" />
+			<param>
+			<key>ConfigurationFile</key>
+			<value>RegistryWriterConfiguration.xml</value>
+			</param>
+			</action>
+			</actions>
+		</panel>
+
+		<panel classname="SimpleFinishPanel" id="finish">
+		</panel>
+	</panels>
+
+	<jar src="../nesi-tools-installer-custom.jar" stage="both" />
+	<jar src="../custom/izpack-standalone-compiler-4.3.5.jar" stage="both"/>
+
+	<packs>
+
+		<pack name="Core libraries" required="yes" preselected="yes">
+			<description>Core applications and libraries</description>
+			
+			<file src="version.txt" targetdir="$INSTALL_PATH/resources"/>
+
+			<file src="resources/getdown.txt" targetdir="$INSTALL_PATH/launch">
+				<os name="Linux" />
+			</file>
+			<file src="resources/getdown-client.jar" targetdir="$INSTALL_PATH/launch">
+				<os name="Linux" />
+			</file>
+			<file src="resources/nesi.png" targetdir="$INSTALL_PATH/launch">
+				<os name="Linux" />
+			</file>
+			<file src="resources/nesi-icon.png" targetdir="$INSTALL_PATH/resources">
+				<os name="Linux" />
+			</file>
+			<file src="resources/gricli-icon.png" targetdir="$INSTALL_PATH/resources">
+				<os name="Linux" />
+			</file>
+			<file src="resources/grisu-icon.png" targetdir="$INSTALL_PATH/resources">
+				<os name="Linux" />
+			</file>
+			<file src="resources/grython-icon.png" targetdir="$INSTALL_PATH/resources">
+				<os name="Linux" />
+			</file>
+			<file src="resources/grid-session-icon.png" targetdir="$INSTALL_PATH/resources">
+				<os name="Linux" />
+			</file>
+			<file src="resources/virtscreen-icon.png" targetdir="$INSTALL_PATH/resources">
+				<os name="Linux" />
+			</file>
+			<file src="resources/uninstall.png" targetdir="$INSTALL_PATH/resources">
+				<os name="Linux" />
+			</file>
+
+
+
+
+
+
+
+
+
+			<file src="scripts/linux/nesi-setup" targetdir="$INSTALL_PATH/bin">
+				<os name="Linux" />
+			</file>
+			<executable targetfile="$INSTALL_PATH/bin/nesi-setup"
+				keep="true" stage="never">
+				<os name="Linux" />
+			</executable>
+
+			<file src="scripts/linux/uninstall.sh" targetdir="$INSTALL_PATH/launch">
+				<os name="Linux" />
+			</file>
+			<executable targetfile="$INSTALL_PATH/launch/uninstall.sh"
+				keep="true" stage="never">
+				<os name="Linux" />
+			</executable>
+
+
+
+
+
+			<file os="windows" src="scripts/windows/grid-settings.bat" targetdir="$INSTALL_PATH/bin">
+				<os family="windows" />
+			</file>
+			<file os="windows" src="scripts/windows/grid-settings.vbs" targetdir="$INSTALL_PATH/bin">
+				<os family="windows" />
+			</file>
+
+			<file os="windows" src="resources/getdown-client.jar" targetdir="$INSTALL_PATH/resources">
+				<os family="windows" />
+			</file>
+			<file os="windows" src="resources/getdown.txt" targetdir="$INSTALL_PATH/resources">
+				<os family="windows" />
+			</file>
+			<file os="windows" src="resources/nesi.png" targetdir="$INSTALL_PATH/resources">
+				<os family="windows" />
+			</file>
+			<file os="windows" src="resources/mobaxterm.ico" targetdir="$INSTALL_PATH/resources">
+				<os family="windows" />
+			</file>
+			<file os="windows" src="resources/grisu-icon.ico" targetdir="$INSTALL_PATH/resources">
+				<os family="windows" />
+			</file>
+			<file os="windows" src="resources/grid-session-icon.ico" targetdir="$INSTALL_PATH/resources">
+				<os family="windows" />
+			</file>
+			<file os="windows" src="resources/gricli-icon.ico" targetdir="$INSTALL_PATH/resources">
+				<os family="windows" />
+			</file>
+			<file os="windows" src="resources/grython-icon.ico" targetdir="$INSTALL_PATH/resources">
+				<os family="windows" />
+			</file>
+			<file os="windows" src="resources/virtscreen-icon.ico" targetdir="$INSTALL_PATH/resources">
+				<os family="windows" />
+			</file>
+
+			<file os="windows" src="resources/nesi-icon.ico" targetdir="$INSTALL_PATH/resources">
+				<os family="windows" />
+			</file>
+
+			<file os="windows" src="windows/uninstall.bat" targetdir="$INSTALL_PATH/resources">
+				<os family="windows" />
+			</file>
+			<file os="windows" src="windows/uninstall.vbs" targetdir="$INSTALL_PATH/resources">
+				<os family="windows" />
+			</file>
+			<file os="windows" src="windows/uninstall.ico" targetdir="$INSTALL_PATH/resources">
+				<os family="windows" />
+			</file>
+
+
+
+			<file src="resources/getdown-client.jar" targetdir="/Library/Frameworks/NeSI/launch">
+				<os name="Mac OS X" />
+			</file>
+			<!-- <file src="grid-client-core.jar" targetdir="/Library/Frameworks/NeSI/launch"> -->
+			<!-- <os name="Mac OS X" /> -->
+			<!-- </file> -->
+			<!-- <file src="grid-client-dependencies.jar" targetdir="/Library/Frameworks/NeSI/launch"> -->
+			<!-- <os name="Mac OS X" /> -->
+			<!-- </file> -->
+			<file src="resources/getdown.txt" targetdir="/Library/Frameworks/NeSI/resources">
+				<os name="Mac OS X" />
+			</file>
+			<file src="resources/nesi.png" targetdir="/Library/Frameworks/NeSI/resources">
+				<os name="Mac OS X" />
+			</file>
+
+
+
+
+			<file src="mac/apps/nesi-setup/NeSI-Setup.app/Contents/Info.plist" targetdir="$INSTALL_PATH/NeSI-Setup.app/Contents">
+				<os name="Mac OS X" />
+			</file>
+			<file src="mac/apps/nesi-setup/NeSI-Setup.app/Contents/Resources/icon.icns" targetdir="$INSTALL_PATH/NeSI-Setup.app/Contents/Resources">
+				<os name="Mac OS X" />
+			</file>
+			<file src="scripts/mac/nesi-setup" targetdir="/usr/bin">
+				<os name="Mac OS X" />
+			</file>
+			<executable targetfile="/usr/bin/nesi-setup" keep="true" stage="never">
+				<os name="Mac OS X" />
+			</executable>
+			<file src="mac/apps/nesi-setup/NeSI-Setup.app/Contents/MacOS/nesi-setup-wrapper.sh" targetdir="$INSTALL_PATH/NeSI-Setup.app/Contents/MacOS">
+				<os name="Mac OS X" />
+			</file>
+			<executable
+				targetfile="$INSTALL_PATH/NeSI-Setup.app/Contents/MacOS/nesi-setup-wrapper.sh" keep="true" stage="never">
+				<os name="Mac OS X" />
+			</executable>
+		</pack>
+
+		<pack name="MobaXTerm" os="windows" required="no" preselected="yes">
+			<description>SSH terminal application to access login nodes
+			</description>
+
+			<file os="windows" src="scripts/windows/mobaXterm.bat" targetdir="$INSTALL_PATH/bin">
+				<os family="windows" />
+			</file>
+			<file os="windows" src="scripts/windows/mobaXterm.vbs" targetdir="$INSTALL_PATH/bin">
+				<os family="windows" />
+			</file>
+
+
+		</pack>
+
+		<pack name="Grisu Template Client" required="no" preselected="yes">
+			<description>GUI to submit and monitor jobs</description>
+
+			<file src="scripts/linux/grisu-template" targetdir="$INSTALL_PATH/bin">
+				<os name="Linux" />
+			</file>
+			<executable targetfile="$INSTALL_PATH/bin/grisu-template"
+				keep="true" stage="never">
+				<os name="Linux" />
+			</executable>
+
+
+			<file os="windows" src="scripts/windows/grisu-template.bat" targetdir="$INSTALL_PATH/bin">
+				<os family="windows" />
+			</file>
+			<file os="windows" src="scripts/windows/grisu-template.vbs" targetdir="$INSTALL_PATH/bin">
+				<os family="windows" />
+			</file>
+
+
+			<file src="mac/apps/grisu-template/Grisu Template.app/Contents/Info.plist" targetdir="$INSTALL_PATH/Grisu Template.app/Contents">
+				<os name="Mac OS X" />
+			</file>
+			<file src="mac/apps/grisu-template/Grisu Template.app/Contents/Resources/icon.icns" targetdir="$INSTALL_PATH/Grisu Template.app/Contents/Resources">
+				<os name="Mac OS X" />
+			</file>
+			<file src="scripts/mac/grisu-template" targetdir="/usr/bin">
+				<os name="Mac OS X" />
+			</file>
+			<executable targetfile="/usr/bin/grisu-template" keep="true"
+				stage="never">
+				<os name="Mac OS X" />
+			</executable>
+			<file src="mac/apps/grisu-template/Grisu Template.app/Contents/MacOS/grisu-template-wrapper.sh"
+				targetdir="$INSTALL_PATH/Grisu Template.app/Contents/MacOS">
+				<os name="Mac OS X" />
+			</file>
+			<executable
+				targetfile="$INSTALL_PATH/Grisu Template.app/Contents/MacOS/grisu-template-wrapper.sh"
+				keep="true" stage="never">
+				<os name="Mac OS X" />
+			</executable>
+
+		</pack>
+
+		<pack name="Gricli" required="no" preselected="yes">
+			<description>Commandline shell to submit and monitor jobs
+			</description>
+			<file src="scripts/linux/griclish" targetdir="$INSTALL_PATH/bin">
+				<os name="Linux" />
+			</file>
+			<executable targetfile="$INSTALL_PATH/bin/griclish" keep="true"
+				stage="never">
+				<os name="Linux" />
+			</executable>
+
+			<file os="windows" src="scripts/windows/griclish.bat" targetdir="$INSTALL_PATH/bin">
+				<os family="windows" />
+			</file>
+
+
+			<file src="mac/apps/gricli/Gricli.app/Contents/Info.plist" targetdir="$INSTALL_PATH/Gricli.app/Contents">
+				<os name="Mac OS X" />
+			</file>
+			<file src="mac/apps/gricli/Gricli.app/Contents/Resources/icon.icns" targetdir="$INSTALL_PATH/Gricli.app/Contents/Resources">
+				<os name="Mac OS X" />
+			</file>
+			<file src="mac/apps/gricli/Gricli.app/Contents/MacOS/gricli-wrapper.sh" targetdir="$INSTALL_PATH/Gricli.app/Contents/MacOS">
+				<os name="Mac OS X" />
+			</file>
+			<executable
+				targetfile="$INSTALL_PATH/Gricli.app/Contents/MacOS/gricli-wrapper.sh"
+				keep="true" stage="never">
+				<os name="Mac OS X" />
+			</executable>
+			<file src="scripts/mac/griclish" targetdir="/usr/bin">
+				<os name="Mac OS X" />
+			</file>
+			<executable targetfile="/usr/bin/griclish" keep="true"
+				stage="never">
+				<os name="Mac OS X" />
+			</executable>
+
+		</pack>
+
+<!-- 		<pack name="Grid-Tray" required="no" preselected="no"> -->
+<!-- 			<description>A tray application that lets you manage your grid -->
+<!-- 				session state -->
+<!-- 			</description> -->
+
+<!-- 			<file src="linux/grid-session" targetdir="$INSTALL_PATH/bin"> -->
+<!-- 				<os name="Linux" /> -->
+<!-- 			</file> -->
+<!-- 			<executable targetfile="$INSTALL_PATH/bin/grid-session" -->
+<!-- 				keep="true" stage="never"> -->
+<!-- 				<os name="Linux" /> -->
+<!-- 			</executable> -->
+
+<!-- 			<file src="linux/grid-tray" targetdir="$INSTALL_PATH/bin"> -->
+<!-- 				<os name="Linux" /> -->
+<!-- 			</file> -->
+<!-- 			<executable targetfile="$INSTALL_PATH/bin/grid-tray" keep="true" -->
+<!-- 				stage="never"> -->
+<!-- 				<os name="Linux" /> -->
+<!-- 			</executable> -->
+
+<!-- 			<file os="windows" src="windows/grid-tray.bat" targetdir="$INSTALL_PATH/bin"> -->
+<!-- 				<os family="windows" /> -->
+<!-- 			</file> -->
+<!-- 			<file os="windows" src="windows/grid-tray.vbs" targetdir="$INSTALL_PATH/bin"> -->
+<!-- 				<os family="windows" /> -->
+<!-- 			</file> -->
+
+
+
+<!-- 			<file src="mac/grid-tray/Info.plist" targetdir="$INSTALL_PATH/Grid-Tray.app/Contents"> -->
+<!-- 				<os name="Mac OS X" /> -->
+<!-- 			</file> -->
+<!-- 			<file src="mac/grid-tray/icon.icns" targetdir="$INSTALL_PATH/Grid-Tray.app/Contents/Resources"> -->
+<!-- 				<os name="Mac OS X" /> -->
+<!-- 			</file> -->
+<!-- 			<file src="mac/grid-tray/grid-tray" targetdir="/usr/bin"> -->
+<!-- 				<os name="Mac OS X" /> -->
+<!-- 			</file> -->
+<!-- 			<executable targetfile="/usr/bin/grid-tray" keep="true" -->
+<!-- 				stage="never"> -->
+<!-- 				<os name="Mac OS X" /> -->
+<!-- 			</executable> -->
+<!-- 			<file src="mac/grid-tray/grid-tray-wrapper.sh" targetdir="$INSTALL_PATH/Grid-Tray.app/Contents/MacOS"> -->
+<!-- 				<os name="Mac OS X" /> -->
+<!-- 			</file> -->
+<!-- 			<executable -->
+<!-- 				targetfile="$INSTALL_PATH/Grid-Tray.app/Contents/MacOS/grid-tray-wrapper.sh" -->
+<!-- 				keep="true" stage="never"> -->
+<!-- 				<os name="Mac OS X" /> -->
+<!-- 			</executable> -->
+
+<!-- 			<file src="mac/grid-session/Info.plist" targetdir="$INSTALL_PATH/Grid-Session.app/Contents"> -->
+<!-- 				<os name="Mac OS X" /> -->
+<!-- 			</file> -->
+<!-- 			<file src="mac/grid-session/icon.icns" targetdir="$INSTALL_PATH/Grid-Session.app/Contents/Resources"> -->
+<!-- 				<os name="Mac OS X" /> -->
+<!-- 			</file> -->
+<!-- 			<file src="mac/grid-session/grid-session-wrapper.sh" targetdir="$INSTALL_PATH/Grid-Session.app/Contents/MacOS"> -->
+<!-- 				<os name="Mac OS X" /> -->
+<!-- 			</file> -->
+<!-- 			<executable -->
+<!-- 				targetfile="$INSTALL_PATH/Grid-Session.app/Contents/MacOS/grid-session-wrapper.sh" -->
+<!-- 				keep="true" stage="never"> -->
+<!-- 				<os name="Mac OS X" /> -->
+<!-- 			</executable> -->
+<!-- 			<file src="mac/grid-session/grid-session" targetdir="/usr/bin"> -->
+<!-- 				<os name="Mac OS X" /> -->
+<!-- 			</file> -->
+<!-- 			<executable targetfile="/usr/bin/grid-session" keep="true" -->
+<!-- 				stage="never"> -->
+<!-- 				<os name="Mac OS X" /> -->
+<!-- 			</executable> -->
+
+<!-- 		</pack> -->
+
+		<pack name="Grython" required="no" preselected="no">
+			<description>Enables the use of jython scripts to access the grid
+			</description>
+
+			<file src="scripts/linux/grython" targetdir="$INSTALL_PATH/bin">
+				<os name="Linux" />
+			</file>
+			<executable targetfile="$INSTALL_PATH/bin/grython" keep="true"
+				stage="never">
+				<os name="Linux" />
+			</executable>
+
+			<file os="windows" src="scripts/windows/grython.bat" targetdir="$INSTALL_PATH/bin">
+				<os family="windows" />
+			</file>
+
+			<file src="mac/apps/grython/Grython.app/Contents/Info.plist" targetdir="$INSTALL_PATH/Grython.app/Contents">
+				<os name="Mac OS X" />
+			</file>
+			<file src="mac/apps/grython/Grython.app/Contents/Resources/icon.icns" targetdir="$INSTALL_PATH/Grython.app/Contents/Resources">
+				<os name="Mac OS X" />
+			</file>
+			<file src="mac/apps/grython/Grython.app/Contents/MacOS/grython-wrapper.sh" targetdir="$INSTALL_PATH/Grython.app/Contents/MacOS">
+				<os name="Mac OS X" />
+			</file>
+			<executable
+				targetfile="$INSTALL_PATH/Grython.app/Contents/MacOS/grython-wrapper.sh"
+				keep="true" stage="never">
+				<os name="Mac OS X" />
+			</executable>
+			<file src="scripts/mac/grython" targetdir="/usr/bin">
+				<os name="Mac OS X" />
+			</file>
+			<executable targetfile="/usr/bin/grython" keep="true"
+				stage="never">
+				<os name="Mac OS X" />
+			</executable>
+
+		</pack>
+
+<!-- 		<pack name="Virtual Screening Client" required="no" preselected="no"> -->
+<!-- 			<description>GUI to submit and monitor virtual screening jobs -->
+<!-- 			</description> -->
+
+<!-- 			<file src="linux/grisu-virtscreen" targetdir="$INSTALL_PATH/bin"> -->
+<!-- 				<os name="Linux" /> -->
+<!-- 			</file> -->
+<!-- 			<executable targetfile="$INSTALL_PATH/bin/grisu-virtscreen" -->
+<!-- 				keep="true" stage="never"> -->
+<!-- 				<os name="Linux" /> -->
+<!-- 			</executable> -->
+
+
+<!-- 			<file os="windows" src="windows/grisu-virtscreen.bat" targetdir="$INSTALL_PATH/bin"> -->
+<!-- 				<os family="windows" /> -->
+<!-- 			</file> -->
+<!-- 			<file os="windows" src="windows/grisu-virtscreen.vbs" targetdir="$INSTALL_PATH/bin"> -->
+<!-- 				<os family="windows" /> -->
+<!-- 			</file> -->
+
+<!-- 			<file src="mac/grisu-virtscreen/Info.plist" targetdir="$INSTALL_PATH/Virtual Screening.app/Contents"> -->
+<!-- 				<os name="Mac OS X" /> -->
+<!-- 			</file> -->
+<!-- 			<file src="mac/grisu-virtscreen/icon.icns" -->
+<!-- 				targetdir="$INSTALL_PATH/Virtual Screening.app/Contents/Resources"> -->
+<!-- 				<os name="Mac OS X" /> -->
+<!-- 			</file> -->
+<!-- 			<file src="mac/grisu-virtscreen/grisu-virtscreen" targetdir="/usr/bin"> -->
+<!-- 				<os name="Mac OS X" /> -->
+<!-- 			</file> -->
+<!-- 			<executable targetfile="/usr/bin/grisu-virtscreen" keep="true" -->
+<!-- 				stage="never"> -->
+<!-- 				<os name="Mac OS X" /> -->
+<!-- 			</executable> -->
+<!-- 			<file src="mac/grisu-virtscreen/grisu-virtscreen-wrapper.sh" -->
+<!-- 				targetdir="$INSTALL_PATH/Virtual Screening.app/Contents/MacOS"> -->
+<!-- 				<os name="Mac OS X" /> -->
+<!-- 			</file> -->
+<!-- 			<executable -->
+<!-- 				targetfile="$INSTALL_PATH/Virtual Screening.app/Contents/MacOS/grisu-virtscreen-wrapper.sh" -->
+<!-- 				keep="true" stage="never"> -->
+<!-- 				<os name="Mac OS X" /> -->
+<!-- 			</executable> -->
+
+<!-- 		</pack> -->
+
+
+	</packs>
+</installation>
