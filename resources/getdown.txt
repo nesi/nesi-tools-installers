@@ -1,0 +1,41 @@
+# The URL from which the client is downloaded
+appbase = http://code.ceres.auckland.ac.nz/downloads/nesi
+
+# UI Configuration
+ui.name = NeSI
+
+ui.background = nesi.png
+ui.progress = 26, 201, 350, 21
+ui.progress_text = 97a4ae
+ui.progress_bar = 425969
+
+ui.status = 30, 249, 350, 21
+ui.status_text = 97a4ae
+
+
+# Application jar files
+code = grid-client-core.jar
+code = grid-client-dependencies.jar
+code = bcprov.jar
+
+# The main entry point for the application
+class = Start
+template.class = grisu.frontend.view.swing.GrisuTemplateApp 
+setup.class = grisu.frontend.view.swing.utils.ssh.wizard.NesiSetupWizard
+tray.class = grith.gridsession.view.tray.GridSessionTrayClient
+virtscreen.class = org.bestgrid.virtscreen.view.GrisuVirtScreen
+update.class = start.UpdateOnly
+
+# Version requirements for our JVM
+java_version = 1060000
+java_version_max = 1060099
+java_location = [windows] /downloads/nesi/jre/java_windows.jar
+java_location = [linux] /downloads/nesi/jre/java_linux.jar
+
+# resources
+resource = [windows] ../MobaXTerm/mobaxterm.exe
+
+
+jvmarg = [linux] -DX509_USER_PROXY=~/.grid/grid.proxy
+jvmarg = [mac os x] -DX509_USER_PROXY=~/.grid/grid.proxy
+jvmarg = [windows] -DX509_USER_PROXY=~\.grid\grid.proxy

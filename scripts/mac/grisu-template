@@ -1,0 +1,26 @@
+#!/bin/sh
+
+APPDIR="$HOME/Library/Application Support/NeSI/"
+JAVA_EXE="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Commands/java"
+
+DIR="/Library/Application Support/grisu-template"
+
+if [ ! -d "$APPDIR" ]
+then
+  mkdir -p "$APPDIR"
+fi
+
+if [ ! -f "$APPDIR/getdown.txt" ] 
+then 
+	cp "$DIR/getdown.txt" "$APPDIR"
+fi
+
+if [ ! -f "$APPDIR/nesi.png" ] 
+then 
+	cp "$DIR/nesi.png" "$APPDIR"
+fi
+
+
+export X509_USER_PROXY="$HOME/.grid/grid.proxy"
+$JAVA_EXE -jar "$DIR/getdown-client.jar" "$APPDIR" template
+
