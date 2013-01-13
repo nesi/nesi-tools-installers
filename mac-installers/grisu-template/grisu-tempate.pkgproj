@@ -21,9 +21,9 @@
 								<key>GID</key>
 								<integer>80</integer>
 								<key>PATH</key>
-								<string>/Users/markus/Documents/installers/grisu-tempate/Grisu Template.app</string>
+								<string>Grisu Template.app</string>
 								<key>PATH_TYPE</key>
-								<integer>0</integer>
+								<integer>1</integer>
 								<key>PERMISSIONS</key>
 								<integer>493</integer>
 								<key>TYPE</key>
@@ -76,7 +76,7 @@
 												<key>GID</key>
 												<integer>80</integer>
 												<key>PATH</key>
-												<string>getdown-client.jar</string>
+												<string>../../resources/getdown-client.jar</string>
 												<key>PATH_TYPE</key>
 												<integer>1</integer>
 												<key>PERMISSIONS</key>
@@ -92,7 +92,7 @@
 												<key>GID</key>
 												<integer>80</integer>
 												<key>PATH</key>
-												<string>getdown.txt</string>
+												<string>../../resources/getdown.txt</string>
 												<key>PATH_TYPE</key>
 												<integer>1</integer>
 												<key>PERMISSIONS</key>
@@ -108,7 +108,7 @@
 												<key>GID</key>
 												<integer>80</integer>
 												<key>PATH</key>
-												<string>grisu-icon.png</string>
+												<string>../../resources/nesi.png</string>
 												<key>PATH_TYPE</key>
 												<integer>1</integer>
 												<key>PERMISSIONS</key>
@@ -527,7 +527,7 @@
 										<key>GID</key>
 										<integer>0</integer>
 										<key>PATH</key>
-										<string>grisu-template</string>
+										<string>../../scripts/mac/grisu-template</string>
 										<key>PATH_TYPE</key>
 										<integer>1</integer>
 										<key>PERMISSIONS</key>

@@ -10,26 +10,6 @@
 				<key>LOCATION</key>
 				<integer>0</integer>
 				<key>NAME</key>
-				<string>grisu-tempate</string>
-			</dict>
-			<key>PATH</key>
-			<dict>
-				<key>PATH</key>
-				<string>../grisu-tempate/build/grisu-tempate.pkg</string>
-				<key>PATH_TYPE</key>
-				<integer>1</integer>
-			</dict>
-			<key>TYPE</key>
-			<integer>1</integer>
-			<key>UUID</key>
-			<string>CB4EF46F-9057-461C-ABA5-27C889E38850</string>
-		</dict>
-		<dict>
-			<key>PACKAGE_SETTINGS</key>
-			<dict>
-				<key>LOCATION</key>
-				<integer>0</integer>
-				<key>NAME</key>
 				<string>nesi-setup</string>
 			</dict>
 			<key>PATH</key>
@@ -84,6 +64,26 @@
 			<key>UUID</key>
 			<string>DB7BFAB1-28EB-4709-AA4A-AED07D1F624A</string>
 		</dict>
+		<dict>
+			<key>PACKAGE_SETTINGS</key>
+			<dict>
+				<key>LOCATION</key>
+				<integer>0</integer>
+				<key>NAME</key>
+				<string>grisu-tempate</string>
+			</dict>
+			<key>PATH</key>
+			<dict>
+				<key>PATH</key>
+				<string>../grisu-template/build/grisu-tempate.pkg</string>
+				<key>PATH_TYPE</key>
+				<integer>1</integer>
+			</dict>
+			<key>TYPE</key>
+			<integer>1</integer>
+			<key>UUID</key>
+			<string>D8245B3F-1ECC-4D56-8AF1-148C229209A4</string>
+		</dict>
 	</array>
 	<key>PROJECT</key>
 	<dict>
@@ -125,27 +125,6 @@
 					<dict>
 						<key>LIST</key>
 						<array>
-							<dict>
-								<key>DESCRIPTION</key>
-								<array/>
-								<key>OPTIONS</key>
-								<dict>
-									<key>HIDDEN</key>
-									<false/>
-									<key>STATE</key>
-									<integer>1</integer>
-								</dict>
-								<key>PACKAGE_UUID</key>
-								<string>CB4EF46F-9057-461C-ABA5-27C889E38850</string>
-								<key>TITLE</key>
-								<array/>
-								<key>TOOLTIP</key>
-								<array/>
-								<key>TYPE</key>
-								<integer>0</integer>
-								<key>UUID</key>
-								<string>32814769-F732-4685-99F4-0F9C6074E0BB</string>
-							</dict>
 							<dict>
 								<key>DESCRIPTION</key>
 								<array/>
@@ -208,6 +187,27 @@
 								<integer>0</integer>
 								<key>UUID</key>
 								<string>DFFFFFBF-8661-41FE-BA16-5CECFD5548FF</string>
+							</dict>
+							<dict>
+								<key>DESCRIPTION</key>
+								<array/>
+								<key>OPTIONS</key>
+								<dict>
+									<key>HIDDEN</key>
+									<false/>
+									<key>STATE</key>
+									<integer>1</integer>
+								</dict>
+								<key>PACKAGE_UUID</key>
+								<string>D8245B3F-1ECC-4D56-8AF1-148C229209A4</string>
+								<key>TITLE</key>
+								<array/>
+								<key>TOOLTIP</key>
+								<array/>
+								<key>TYPE</key>
+								<integer>0</integer>
+								<key>UUID</key>
+								<string>90D3ECFC-D29D-4EE7-83BF-3B332B0CF7ED</string>
 							</dict>
 						</array>
 						<key>REMOVED</key>

@@ -76,11 +76,11 @@
 												<key>GID</key>
 												<integer>80</integer>
 												<key>PATH</key>
-												<string>getdown-client.jar</string>
+												<string>../../resources/getdown-client.jar</string>
 												<key>PATH_TYPE</key>
 												<integer>1</integer>
 												<key>PERMISSIONS</key>
-												<integer>492</integer>
+												<integer>420</integer>
 												<key>TYPE</key>
 												<integer>3</integer>
 												<key>UID</key>
@@ -92,11 +92,11 @@
 												<key>GID</key>
 												<integer>80</integer>
 												<key>PATH</key>
-												<string>getdown.txt</string>
+												<string>../../resources/getdown.txt</string>
 												<key>PATH_TYPE</key>
 												<integer>1</integer>
 												<key>PERMISSIONS</key>
-												<integer>484</integer>
+												<integer>420</integer>
 												<key>TYPE</key>
 												<integer>3</integer>
 												<key>UID</key>
@@ -511,7 +511,7 @@
 										<key>GID</key>
 										<integer>0</integer>
 										<key>PATH</key>
-										<string>grython</string>
+										<string>../../scripts/mac/grython</string>
 										<key>PATH_TYPE</key>
 										<integer>1</integer>
 										<key>PERMISSIONS</key>
