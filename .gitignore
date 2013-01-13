@@ -2,9 +2,9 @@
 *.pkg
 *~
 *#
-windows-installer/nesi-tools/nesi-cache/*
+windows-installers/nesi-tools/nesi-cache/*
 *.msi
-windows-installer/nesi-tools/resources/java_vm
+resources/windows/java_vm
 .classpath
 .project
 target
