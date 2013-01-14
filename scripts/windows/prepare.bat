@@ -6,6 +6,10 @@ if NOT EXIST "%dir%" (
 	MD "%dir%"
 )
 
+if NOT EXIST "%USERPROFILE%\.grid" (
+	MD "%USERPROFILE%\.grid"
+)
+
 if EXIST "..\resources\getdown.txt" (
     set GRISU_HOME=..\
 )
