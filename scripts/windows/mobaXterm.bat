@@ -19,13 +19,13 @@ if NOT EXIST "%dir%\mobaxterm.exe" (
 @echo Checking for updates. This might take a while...
 "%JAVA_EXE%" -jar "%GRISU_HOME%\resources\getdown-client.jar" "%grisu_dir%" update
 
-if NOT EXIST "%dir%\MobaXterm.ini" (
+REM if NOT EXIST "%dir%\MobaXterm.ini" (
 
-	set MOBAXTERM_LOCATION=%dir%
+REM	set MOBAXTERM_LOCATION=%dir%
 	
-	"%JAVA_EXE%" -cp "%grisu_dir%\grid-client-core.jar;%grisu_dir%\grid-client-dependencies.jar" "grisu.frontend.view.swing.utils.ssh.wizard.NesiSetupWizard"
+REM	"%JAVA_EXE%" -cp "%grisu_dir%\grid-client-core.jar;%grisu_dir%\grid-client-dependencies.jar" "grisu.frontend.view.swing.utils.ssh.wizard.NesiSetupWizard"
 
-)
+REM )
 
 "%dir%\mobaxterm.exe"
 
