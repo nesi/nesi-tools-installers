@@ -2,16 +2,16 @@
 
 CALL prepare.bat
 
-set moba_dir=%APPDATA%\NeSI\MobaXTerm
+set MOBAXTERM_LOCATION=%APPDATA%\NeSI\MobaXTerm
 set grisu_dir=%APPDATA%\NeSI\Grisu
 
 
 
-if NOT EXIST "%moba_dir%" (
-	MD "%moba_dir%"
+if NOT EXIST "%MOBAXTERM_LOCATION%" (
+	MD "%MOBAXTERM_LOCATION%"
 )
 
-set moba_exe_location_target=%moba_dir%\mobaxterm.exe
+set moba_exe_location_target=%MOBAXTERM_LOCATION%\mobaxterm.exe
 set moba_exe_location_source=..\bin\mobaxterm.exe
 if NOT EXIST "%moba_exe_location_target%" (
 	COPY "%moba_exe_location_source%" "%moba_exe_location_target%"
