@@ -3,6 +3,9 @@
 *~
 *#
 windows-installers/nesi-tools/nesi-cache/*
+windows-installers/gee/gee-cache/*
+windows-installers/virtscreen-client/nesi-cache/*
+windows-installers/virtscreen-client/virtscreen-client-cache/*
 *.msi
 resources/windows/java_vm
 .classpath
@@ -19,3 +22,4 @@ rebel.xml
 grisu-server.config
 multi-platform/target/*
 multi-platform/.settings/*
+
