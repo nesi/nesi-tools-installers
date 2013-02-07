@@ -31,6 +31,8 @@
 				<integer>0</integer>
 				<key>NAME</key>
 				<string>gricli</string>
+				<key>REFERENCE_PATH</key>
+				<string>./NeSI Tools</string>
 			</dict>
 			<key>PATH</key>
 			<dict>
@@ -51,6 +53,8 @@
 				<integer>0</integer>
 				<key>NAME</key>
 				<string>grython</string>
+				<key>REFERENCE_PATH</key>
+				<string>./NeSI Tools</string>
 			</dict>
 			<key>PATH</key>
 			<dict>
@@ -71,6 +75,8 @@
 				<integer>0</integer>
 				<key>NAME</key>
 				<string>grisu-tempate</string>
+				<key>REFERENCE_PATH</key>
+				<string>./NeSI Tools</string>
 			</dict>
 			<key>PATH</key>
 			<dict>
@@ -137,6 +143,8 @@
 								</dict>
 								<key>PACKAGE_UUID</key>
 								<string>BA398772-8503-44A7-A3AC-731CE68BAFCC</string>
+								<key>REQUIREMENTS</key>
+								<array/>
 								<key>TITLE</key>
 								<array/>
 								<key>TOOLTIP</key>
@@ -158,6 +166,8 @@
 								</dict>
 								<key>PACKAGE_UUID</key>
 								<string>816BCBF4-CAE4-40E0-9D59-346E08C5070D</string>
+								<key>REQUIREMENTS</key>
+								<array/>
 								<key>TITLE</key>
 								<array/>
 								<key>TOOLTIP</key>
@@ -175,10 +185,12 @@
 									<key>HIDDEN</key>
 									<false/>
 									<key>STATE</key>
-									<integer>1</integer>
+									<integer>2</integer>
 								</dict>
 								<key>PACKAGE_UUID</key>
 								<string>DB7BFAB1-28EB-4709-AA4A-AED07D1F624A</string>
+								<key>REQUIREMENTS</key>
+								<array/>
 								<key>TITLE</key>
 								<array/>
 								<key>TOOLTIP</key>
@@ -200,6 +212,8 @@
 								</dict>
 								<key>PACKAGE_UUID</key>
 								<string>D8245B3F-1ECC-4D56-8AF1-148C229209A4</string>
+								<key>REQUIREMENTS</key>
+								<array/>
 								<key>TITLE</key>
 								<array/>
 								<key>TOOLTIP</key>
@@ -291,6 +305,11 @@
 				<integer>0</integer>
 			</dict>
 			<key>README</key>
+			<dict>
+				<key>LOCALIZATIONS</key>
+				<array/>
+			</dict>
+			<key>SUMMARY</key>
 			<dict>
 				<key>LOCALIZATIONS</key>
 				<array/>

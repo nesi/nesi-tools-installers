@@ -17,34 +17,17 @@
 						<array>
 							<dict>
 								<key>CHILDREN</key>
-								<array>
-									<dict>
-										<key>CHILDREN</key>
-										<array/>
-										<key>GID</key>
-										<integer>80</integer>
-										<key>PATH</key>
-										<string>Grisu Template.app</string>
-										<key>PATH_TYPE</key>
-										<integer>1</integer>
-										<key>PERMISSIONS</key>
-										<integer>493</integer>
-										<key>TYPE</key>
-										<integer>3</integer>
-										<key>UID</key>
-										<integer>0</integer>
-									</dict>
-								</array>
+								<array/>
 								<key>GID</key>
 								<integer>80</integer>
 								<key>PATH</key>
-								<string>NeSI Tools</string>
+								<string>gee.app</string>
 								<key>PATH_TYPE</key>
-								<integer>0</integer>
+								<integer>1</integer>
 								<key>PERMISSIONS</key>
-								<integer>509</integer>
+								<integer>493</integer>
 								<key>TYPE</key>
-								<integer>2</integer>
+								<integer>3</integer>
 								<key>UID</key>
 								<integer>0</integer>
 							</dict>
@@ -113,23 +96,7 @@
 												<key>PATH_TYPE</key>
 												<integer>1</integer>
 												<key>PERMISSIONS</key>
-												<integer>420</integer>
-												<key>TYPE</key>
-												<integer>3</integer>
-												<key>UID</key>
-												<integer>0</integer>
-											</dict>
-											<dict>
-												<key>CHILDREN</key>
-												<array/>
-												<key>GID</key>
-												<integer>80</integer>
-												<key>PATH</key>
-												<string>../../resources/nesi.png</string>
-												<key>PATH_TYPE</key>
-												<integer>1</integer>
-												<key>PERMISSIONS</key>
-												<integer>420</integer>
+												<integer>493</integer>
 												<key>TYPE</key>
 												<integer>3</integer>
 												<key>UID</key>
@@ -139,7 +106,7 @@
 										<key>GID</key>
 										<integer>80</integer>
 										<key>PATH</key>
-										<string>grisu-template</string>
+										<string>gee</string>
 										<key>PATH_TYPE</key>
 										<integer>0</integer>
 										<key>PERMISSIONS</key>
@@ -544,7 +511,7 @@
 										<key>GID</key>
 										<integer>0</integer>
 										<key>PATH</key>
-										<string>../../scripts/mac/grisu-template</string>
+										<string>../../scripts/mac/gee</string>
 										<key>PATH_TYPE</key>
 										<integer>1</integer>
 										<key>PERMISSIONS</key>
@@ -601,28 +568,15 @@
 			<key>VERSION</key>
 			<integer>2</integer>
 		</dict>
-		<key>PACKAGE_SCRIPTS</key>
-		<dict>
-			<key>POSTINSTALL_PATH</key>
-			<dict/>
-			<key>PREINSTALL_PATH</key>
-			<dict/>
-			<key>RESOURCES</key>
-			<array/>
-		</dict>
 		<key>PACKAGE_SETTINGS</key>
 		<dict>
 			<key>AUTHENTICATION</key>
 			<integer>1</integer>
 			<key>CONCLUSION_ACTION</key>
 			<integer>0</integer>
-			<key>FOLLOW_SYMBOLIC_LINKS</key>
-			<false/>
 			<key>IDENTIFIER</key>
-			<string>nz.org.nesi.pkg.grisu-tempate</string>
+			<string>nz.org.nesi.pkg.gee</string>
 			<key>OVERWRITE_PERMISSIONS</key>
-			<false/>
-			<key>RELOCATABLE</key>
 			<false/>
 			<key>VERSION</key>
 			<string>0.1</string>
@@ -631,17 +585,6 @@
 		<dict>
 			<key>NOTES</key>
 			<data>
-			PCFET0NUWVBFIGh0bWwgUFVCTElDICItLy9XM0MvL0RURCBIVE1M
-			IDQuMDEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvVFIvaHRtbDQv
-			c3RyaWN0LmR0ZCI+CjxodG1sPgo8aGVhZD4KPG1ldGEgaHR0cC1l
-			cXVpdj0iQ29udGVudC1UeXBlIiBjb250ZW50PSJ0ZXh0L2h0bWw7
-			IGNoYXJzZXQ9VVRGLTgiPgo8bWV0YSBodHRwLWVxdWl2PSJDb250
-			ZW50LVN0eWxlLVR5cGUiIGNvbnRlbnQ9InRleHQvY3NzIj4KPHRp
-			dGxlPjwvdGl0bGU+CjxtZXRhIG5hbWU9IkdlbmVyYXRvciIgY29u
-			dGVudD0iQ29jb2EgSFRNTCBXcml0ZXIiPgo8bWV0YSBuYW1lPSJD
-			b2NvYVZlcnNpb24iIGNvbnRlbnQ9IjExODcuMzQiPgo8c3R5bGUg
-			dHlwZT0idGV4dC9jc3MiPgo8L3N0eWxlPgo8L2hlYWQ+Cjxib2R5
-			Pgo8L2JvZHk+CjwvaHRtbD4K
 			</data>
 		</dict>
 		<key>PROJECT_SETTINGS</key>
@@ -822,9 +765,7 @@
 				</dict>
 			</array>
 			<key>NAME</key>
-			<string>grisu-tempate</string>
-			<key>PAYLOAD_ONLY</key>
-			<false/>
+			<string>gee</string>
 		</dict>
 	</dict>
 	<key>TYPE</key>
