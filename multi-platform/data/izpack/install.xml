@@ -358,24 +358,24 @@
 			</file>
 
 
-			<file src="mac/apps/gricli/Gricli.app/Contents/Info.plist" targetdir="$INSTALL_PATH/Gricli.app/Contents">
+			<file src="mac/apps/gee/gee.app/Contents/Info.plist" targetdir="$INSTALL_PATH/gee.app/Contents">
 				<os name="Mac OS X" />
 			</file>
-			<file src="mac/apps/gricli/Gricli.app/Contents/Resources/icon.icns" targetdir="$INSTALL_PATH/Gricli.app/Contents/Resources">
+			<file src="mac/apps/gee/gee.app/Contents/Resources/icon.icns" targetdir="$INSTALL_PATH/gee.app/Contents/Resources">
 				<os name="Mac OS X" />
 			</file>
-			<file src="mac/apps/gricli/Gricli.app/Contents/MacOS/gricli-wrapper.sh" targetdir="$INSTALL_PATH/Gricli.app/Contents/MacOS">
+			<file src="mac/apps/gee/gee.app/Contents/MacOS/gee-wrapper.sh" targetdir="$INSTALL_PATH/gee.app/Contents/MacOS">
 				<os name="Mac OS X" />
 			</file>
 			<executable
-				targetfile="$INSTALL_PATH/Gricli.app/Contents/MacOS/gricli-wrapper.sh"
+				targetfile="$INSTALL_PATH/gee.app/Contents/MacOS/gee-wrapper.sh"
 				keep="true" stage="never">
 				<os name="Mac OS X" />
 			</executable>
-			<file src="scripts/mac/griclish" targetdir="/usr/bin">
+			<file src="scripts/mac/gee" targetdir="/usr/bin">
 				<os name="Mac OS X" />
 			</file>
-			<executable targetfile="/usr/bin/griclish" keep="true"
+			<executable targetfile="/usr/bin/gee" keep="true"
 				stage="never">
 				<os name="Mac OS X" />
 			</executable>
