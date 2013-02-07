@@ -1,6 +1,6 @@
 @ECHO OFF
 
-CALL prepare.bat
+CALL prepare_virtscreen.bat
 
 @echo Using proxy path: "!X509_USER_PROXY!"
 
