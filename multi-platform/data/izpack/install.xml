@@ -341,6 +341,47 @@
 			</executable>
 
 		</pack>
+		
+		<pack name="Gee" required="no" preselected="no">
+			<description>Command line application to submit end-to-end tests
+			</description>
+			<file src="scripts/linux/gee" targetdir="$INSTALL_PATH/bin">
+				<os name="Linux" />
+			</file>
+			<executable targetfile="$INSTALL_PATH/bin/gee" keep="true"
+				stage="never">
+				<os name="Linux" />
+			</executable>
+
+			<file os="windows" src="scripts/windows/gee.bat" targetdir="$INSTALL_PATH/bin">
+				<os family="windows" />
+			</file>
+
+
+			<file src="mac/apps/gricli/Gricli.app/Contents/Info.plist" targetdir="$INSTALL_PATH/Gricli.app/Contents">
+				<os name="Mac OS X" />
+			</file>
+			<file src="mac/apps/gricli/Gricli.app/Contents/Resources/icon.icns" targetdir="$INSTALL_PATH/Gricli.app/Contents/Resources">
+				<os name="Mac OS X" />
+			</file>
+			<file src="mac/apps/gricli/Gricli.app/Contents/MacOS/gricli-wrapper.sh" targetdir="$INSTALL_PATH/Gricli.app/Contents/MacOS">
+				<os name="Mac OS X" />
+			</file>
+			<executable
+				targetfile="$INSTALL_PATH/Gricli.app/Contents/MacOS/gricli-wrapper.sh"
+				keep="true" stage="never">
+				<os name="Mac OS X" />
+			</executable>
+			<file src="scripts/mac/griclish" targetdir="/usr/bin">
+				<os name="Mac OS X" />
+			</file>
+			<executable targetfile="/usr/bin/griclish" keep="true"
+				stage="never">
+				<os name="Mac OS X" />
+			</executable>
+
+		</pack>
+		
 
 <!-- 		<pack name="Grid-Tray" required="no" preselected="no"> -->
 <!-- 			<description>A tray application that lets you manage your grid -->
