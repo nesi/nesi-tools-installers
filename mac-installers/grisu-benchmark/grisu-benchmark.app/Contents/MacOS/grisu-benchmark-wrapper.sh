@@ -19,9 +19,9 @@
 if [[ $OSTYPE = "darwin9.0" ]]; then
   exit
 elif [[ $OSTYPE = "darwin10.0" ]]; then
-  open -a Terminal "/usr/bin/gee"
+  open -a Terminal "/usr/bin/grisu-benchmark"
 elif [[ $OSTYPE = "darwin11" ]]; then
-  open -F -a Terminal "/usr/bin/gee"
+  open -F -a Terminal "/usr/bin/grisu-benchmark"
 else
-  open -F -a Terminal "/usr/bin/gee"
+  open -F -a Terminal "/usr/bin/grisu-benchmark"
 fi
