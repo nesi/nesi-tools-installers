@@ -415,19 +415,19 @@
 				<os family="windows" />
 			</file>
 
-			<file src="mac/apps/grisu-benchmark/grisu-benchmark.app/Contents/Info.plist" targetdir="$INSTALL_PATH/gee.app/Contents">
+			<file src="mac/apps/grisu-benchmark/grisu-benchmark.app/Contents/Info.plist" targetdir="$INSTALL_PATH/grisu-benchmark.app/Contents">
 				<os name="Mac OS X" />
 			</file>
-			<file src="mac/apps/grisu-benchmark/grisu-benchmark.app/Contents/Resources/icon.icns" targetdir="$INSTALL_PATH/gee.app/Contents/Resources">
+			<file src="mac/apps/grisu-benchmark/grisu-benchmark.app/Contents/Resources/icon.icns" targetdir="$INSTALL_PATH/grisu-benchmark.app/Contents/Resources">
 				<os name="Mac OS X" />
 			</file>
-			<file src="mac/apps/grisu-benchmark/grisu-benchmark.app/Contents/MacOS/grisu-benchmark-create-wrapper.sh" targetdir="$INSTALL_PATH/gee.app/Contents/MacOS">
+			<file src="mac/apps/grisu-benchmark/grisu-benchmark.app/Contents/MacOS/grisu-benchmark-create-wrapper.sh" targetdir="$INSTALL_PATH/grisu-benchmark.app/Contents/MacOS">
 				<os name="Mac OS X" />
 			</file>
-			<file src="mac/apps/grisu-benchmark/grisu-benchmark.app/Contents/MacOS/grisu-benchmark-submit-wrapper.sh" targetdir="$INSTALL_PATH/gee.app/Contents/MacOS">
+			<file src="mac/apps/grisu-benchmark/grisu-benchmark.app/Contents/MacOS/grisu-benchmark-submit-wrapper.sh" targetdir="$INSTALL_PATH/grisu-benchmark.app/Contents/MacOS">
 				<os name="Mac OS X" />
 			</file>
-			<file src="mac/apps/grisu-benchmark/grisu-benchmark.app/Contents/MacOS/grisu-benchmark-results-wrapper.sh" targetdir="$INSTALL_PATH/gee.app/Contents/MacOS">
+			<file src="mac/apps/grisu-benchmark/grisu-benchmark.app/Contents/MacOS/grisu-benchmark-results-wrapper.sh" targetdir="$INSTALL_PATH/grisu-benchmark.app/Contents/MacOS">
 				<os name="Mac OS X" />
 			</file>
 			<executable
