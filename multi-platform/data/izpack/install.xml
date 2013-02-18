@@ -124,14 +124,6 @@
 				<os name="Linux" />
 			</file>
 
-
-
-
-
-
-
-
-
 			<file src="scripts/linux/nesi-setup" targetdir="$INSTALL_PATH/bin">
 				<os name="Linux" />
 			</file>
@@ -149,9 +141,9 @@
 			</executable>
 
 
-
-
-
+			<file os="windows" src="scripts/windows/prepare.bat" targetdir="$INSTALL_PATH/bin">
+				<os family="windows" />
+			</file>
 			<file os="windows" src="scripts/windows/grid-settings.bat" targetdir="$INSTALL_PATH/bin">
 				<os family="windows" />
 			</file>
@@ -353,6 +345,9 @@
 				<os name="Linux" />
 			</executable>
 
+			<file os="windows" src="scripts/windows/prepare_gee.bat" targetdir="$INSTALL_PATH/bin">
+				<os family="windows" />
+			</file>
 			<file os="windows" src="scripts/windows/gee.bat" targetdir="$INSTALL_PATH/bin">
 				<os family="windows" />
 			</file>
@@ -381,6 +376,98 @@
 			</executable>
 
 		</pack>
+	
+		<pack name="Grisu-Benchmark" required="no" preselected="no">
+			<description>Command line application to submit series of benchmarks
+			</description>
+			<file src="scripts/linux/grisu-benchmark-create" targetdir="$INSTALL_PATH/bin">
+				<os name="Linux" />
+			</file>
+			<file src="scripts/linux/grisu-benchmark-submit" targetdir="$INSTALL_PATH/bin">
+				<os name="Linux" />
+			</file>
+			<file src="scripts/linux/grisu-benchmark-results" targetdir="$INSTALL_PATH/bin">
+				<os name="Linux" />
+			</file>
+			<executable targetfile="$INSTALL_PATH/bin/grisu-benchmark-create" keep="true"
+				stage="never">
+				<os name="Linux" />
+			</executable>
+			<executable targetfile="$INSTALL_PATH/bin/grisu-benchmark-submit" keep="true"
+				stage="never">
+				<os name="Linux" />
+			</executable>
+			<executable targetfile="$INSTALL_PATH/bin/grisu-benchmark-results" keep="true"
+				stage="never">
+				<os name="Linux" />
+			</executable>
+
+			<file os="windows" src="scripts/windows/prepare_grisu-benchmark.bat" targetdir="$INSTALL_PATH/bin">
+				<os family="windows" />
+			</file>
+			<file os="windows" src="scripts/windows/grisu-benchmark-create.bat" targetdir="$INSTALL_PATH/bin">
+				<os family="windows" />
+			</file>
+			<file os="windows" src="scripts/windows/grisu-benchmark-submit.bat" targetdir="$INSTALL_PATH/bin">
+				<os family="windows" />
+			</file>
+			<file os="windows" src="scripts/windows/grisu-benchmark-results.bat" targetdir="$INSTALL_PATH/bin">
+				<os family="windows" />
+			</file>
+
+			<file src="mac/apps/grisu-benchmark/grisu-benchmark.app/Contents/Info.plist" targetdir="$INSTALL_PATH/gee.app/Contents">
+				<os name="Mac OS X" />
+			</file>
+			<file src="mac/apps/grisu-benchmark/grisu-benchmark.app/Contents/Resources/icon.icns" targetdir="$INSTALL_PATH/gee.app/Contents/Resources">
+				<os name="Mac OS X" />
+			</file>
+			<file src="mac/apps/grisu-benchmark/grisu-benchmark.app/Contents/MacOS/grisu-benchmark-create-wrapper.sh" targetdir="$INSTALL_PATH/gee.app/Contents/MacOS">
+				<os name="Mac OS X" />
+			</file>
+			<file src="mac/apps/grisu-benchmark/grisu-benchmark.app/Contents/MacOS/grisu-benchmark-submit-wrapper.sh" targetdir="$INSTALL_PATH/gee.app/Contents/MacOS">
+				<os name="Mac OS X" />
+			</file>
+			<file src="mac/apps/grisu-benchmark/grisu-benchmark.app/Contents/MacOS/grisu-benchmark-results-wrapper.sh" targetdir="$INSTALL_PATH/gee.app/Contents/MacOS">
+				<os name="Mac OS X" />
+			</file>
+			<executable
+				targetfile="$INSTALL_PATH/grisu-benchmark.app/Contents/MacOS/grisu-benchmark-create-wrapper.sh"
+				keep="true" stage="never">
+				<os name="Mac OS X" />
+			</executable>
+			<executable
+				targetfile="$INSTALL_PATH/grisu-benchmark.app/Contents/MacOS/grisu-benchmark-submit-wrapper.sh"
+				keep="true" stage="never">
+				<os name="Mac OS X" />
+			</executable>
+			<executable
+				targetfile="$INSTALL_PATH/grisu-benchmark.app/Contents/MacOS/grisu-benchmark-results-wrapper.sh"
+				keep="true" stage="never">
+				<os name="Mac OS X" />
+			</executable>
+			<file src="scripts/mac/grisu-benchmark-create" targetdir="/usr/bin">
+				<os name="Mac OS X" />
+			</file>
+			<file src="scripts/mac/grisu-benchmark-submit" targetdir="/usr/bin">
+				<os name="Mac OS X" />
+			</file>
+			<file src="scripts/mac/grisu-benchmark-results" targetdir="/usr/bin">
+				<os name="Mac OS X" />
+			</file>
+			<executable targetfile="/usr/bin/grisu-benchmark-create" keep="true"
+				stage="never">
+				<os name="Mac OS X" />
+			</executable>
+			<executable targetfile="/usr/bin/grisu-benchmark-submit" keep="true"
+				stage="never">
+				<os name="Mac OS X" />
+			</executable>
+			<executable targetfile="/usr/bin/grisu-benchmark-results" keep="true"
+				stage="never">
+				<os name="Mac OS X" />
+			</executable>
+
+		</pack>		
 		
 
 <!-- 		<pack name="Grid-Tray" required="no" preselected="no"> -->

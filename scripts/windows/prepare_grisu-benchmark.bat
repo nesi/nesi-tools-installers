@@ -13,18 +13,18 @@ if NOT EXIST "%grid_dir%" (
 
 set getdown_txt=..\resources\getdown.txt
 if EXIST "%getdown_txt%" (
-    set GEE_HOME=..\
+    set GRISU_BENCHMARK_HOME=..\
 )
 
 set getdown_txt_target=%dir%\getdown.txt
-set getdown_txt_source=%GEE_HOME%\resources\getdown.txt
+set getdown_txt_source=%GRISU_BENCHMARK_HOME%\resources\getdown.txt
 
 if NOT EXIST "%getdown_txt_target%" (
     COPY "%getdown_txt_source%" "%getdown_txt_target%"
 )
 
 set nesi_png=%dir%\nesi.png
-set nesi_png_source=%GEE_HOME%\resources\nesi.png
+set nesi_png_source=%GRISU_BENCHMARK_HOME%\resources\nesi.png
 if NOT EXIST "%nesi_png%" (
     COPY "%nesi_png_source%" "%dir%\nesi.png"
 )
