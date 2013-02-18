@@ -90,6 +90,26 @@
 			<key>UUID</key>
 			<string>D8245B3F-1ECC-4D56-8AF1-148C229209A4</string>
 		</dict>
+		<dict>
+			<key>PACKAGE_SETTINGS</key>
+			<dict>
+				<key>LOCATION</key>
+				<integer>0</integer>
+				<key>NAME</key>
+				<string>grisu-benchmark</string>
+			</dict>
+			<key>PATH</key>
+			<dict>
+				<key>PATH</key>
+				<string>../grisu-benchmark/build/grisu-benchmark.pkg</string>
+				<key>PATH_TYPE</key>
+				<integer>1</integer>
+			</dict>
+			<key>TYPE</key>
+			<integer>1</integer>
+			<key>UUID</key>
+			<string>5D3E66C8-9860-42FB-83C0-CBF6DB0D6918</string>
+		</dict>
 	</array>
 	<key>PROJECT</key>
 	<dict>
@@ -165,6 +185,29 @@
 									<integer>1</integer>
 								</dict>
 								<key>PACKAGE_UUID</key>
+								<string>D8245B3F-1ECC-4D56-8AF1-148C229209A4</string>
+								<key>REQUIREMENTS</key>
+								<array/>
+								<key>TITLE</key>
+								<array/>
+								<key>TOOLTIP</key>
+								<array/>
+								<key>TYPE</key>
+								<integer>0</integer>
+								<key>UUID</key>
+								<string>90D3ECFC-D29D-4EE7-83BF-3B332B0CF7ED</string>
+							</dict>
+							<dict>
+								<key>DESCRIPTION</key>
+								<array/>
+								<key>OPTIONS</key>
+								<dict>
+									<key>HIDDEN</key>
+									<false/>
+									<key>STATE</key>
+									<integer>1</integer>
+								</dict>
+								<key>PACKAGE_UUID</key>
 								<string>816BCBF4-CAE4-40E0-9D59-346E08C5070D</string>
 								<key>REQUIREMENTS</key>
 								<array/>
@@ -208,10 +251,10 @@
 									<key>HIDDEN</key>
 									<false/>
 									<key>STATE</key>
-									<integer>1</integer>
+									<integer>2</integer>
 								</dict>
 								<key>PACKAGE_UUID</key>
-								<string>D8245B3F-1ECC-4D56-8AF1-148C229209A4</string>
+								<string>5D3E66C8-9860-42FB-83C0-CBF6DB0D6918</string>
 								<key>REQUIREMENTS</key>
 								<array/>
 								<key>TITLE</key>
@@ -221,7 +264,7 @@
 								<key>TYPE</key>
 								<integer>0</integer>
 								<key>UUID</key>
-								<string>90D3ECFC-D29D-4EE7-83BF-3B332B0CF7ED</string>
+								<string>2E6AD184-32E1-460C-8B20-BCA09E23BF01</string>
 							</dict>
 						</array>
 						<key>REMOVED</key>
