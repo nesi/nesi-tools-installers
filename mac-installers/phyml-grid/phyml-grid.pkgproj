@@ -21,11 +21,11 @@
 								<key>GID</key>
 								<integer>80</integer>
 								<key>PATH</key>
-								<string>phyml-grid.pkgproj</string>
+								<string>phyml-grid.app</string>
 								<key>PATH_TYPE</key>
 								<integer>1</integer>
 								<key>PERMISSIONS</key>
-								<integer>420</integer>
+								<integer>493</integer>
 								<key>TYPE</key>
 								<integer>3</integer>
 								<key>UID</key>
@@ -634,7 +634,7 @@
 				<key>PATH</key>
 				<string>build</string>
 				<key>PATH_TYPE</key>
-				<integer>1</integer>
+				<integer>3</integer>
 			</dict>
 			<key>EXCLUDED_FILES</key>
 			<array>
