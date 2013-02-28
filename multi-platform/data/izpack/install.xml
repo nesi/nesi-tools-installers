@@ -586,6 +586,53 @@
 
 		</pack>
 
+		<pack name="Phyml-grid client" required="no" preselected="no">
+			<description>GUI to submit and monitor virtual screening jobs
+			</description>
+
+			<file src="scripts/linux/phyml-grid" targetdir="$INSTALL_PATH/bin">
+				<os name="Linux" />
+			</file>
+			<executable targetfile="$INSTALL_PATH/bin/phyml-grid" keep="true"
+				stage="never">
+				<os name="Linux" />
+			</executable>
+
+
+			<file os="windows" src="scripts/windows/phyml-grid.bat" targetdir="$INSTALL_PATH/bin">
+				<os family="windows" />
+			</file>
+			<file os="windows" src="scripts/windows/prepare_phyml.bat" targetdir="$INSTALL_PATH/bin">
+				<os family="windows" />
+			</file>			
+			<file os="windows" src="scripts/windows/phyml-grid.vbs" targetdir="$INSTALL_PATH/bin">
+				<os family="windows" />
+			</file>
+
+		<file src="mac/apps/phyml-grid/phyml-grid.app/Contents/Info.plist" targetdir="$INSTALL_PATH/phyml-grid.app/Contents">
+				<os name="Mac OS X" />
+			</file>
+			<file src="mac/apps/phyml-grid/phyml-grid.app/Contents/Resources/icon.icns" targetdir="$INSTALL_PATH/phyml-grid.app/Contents/Resources">
+				<os name="Mac OS X" />
+			</file>
+			<file src="mac/apps/phyml-grid/phyml-grid.app/Contents/MacOS/phyml-grid-wrapper.sh" targetdir="$INSTALL_PATH/phyml-grid.app/Contents/MacOS">
+				<os name="Mac OS X" />
+			</file>
+			<executable
+				targetfile="$INSTALL_PATH/phyml-grid.app/Contents/MacOS/phyml-grid-wrapper.sh"
+				keep="true" stage="never">
+				<os name="Mac OS X" />
+			</executable>
+			<file src="scripts/mac/phyml-grid" targetdir="/usr/bin">
+				<os name="Mac OS X" />
+			</file>
+			<executable targetfile="/usr/bin/phyml-grid" keep="true"
+				stage="never">
+				<os name="Mac OS X" />
+			</executable>
+
+
+		</pack>
 <!-- 		<pack name="Virtual Screening Client" required="no" preselected="no"> -->
 <!-- 			<description>GUI to submit and monitor virtual screening jobs -->
 <!-- 			</description> -->
@@ -631,7 +678,6 @@
 <!-- 			</executable> -->
 
 <!-- 		</pack> -->
-
 
 	</packs>
 </installation>
