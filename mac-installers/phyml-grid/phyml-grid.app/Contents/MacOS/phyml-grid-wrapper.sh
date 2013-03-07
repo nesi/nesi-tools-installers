@@ -1,4 +1,4 @@
 #!/bin/sh
 
-/usr/bin/grisu-template
+/usr/bin/phyml-grid
 
