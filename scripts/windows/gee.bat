@@ -7,5 +7,5 @@ CALL prepare_gee.bat
 
 @echo Using proxy path: "%X509_USER_PROXY%"
 	
-%JAVA_EXE% -cp "%dir%\grid-client-core.jar;%dir%\grid-client-dependencies.jar" grisu.frontend.gee.Gee %*
+%JAVA_EXE% -cp "%dir%\grid-client-core.jar;%dir%\grid-client-dependencies.jar;%dir%\local-backend.jar" grisu.frontend.gee.Gee %*
 

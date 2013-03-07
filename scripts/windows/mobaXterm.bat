@@ -24,7 +24,7 @@ REM if NOT EXIST "%dir%\MobaXterm.ini" (
 
 REM	set MOBAXTERM_LOCATION=%dir%
 	
-REM	"%JAVA_EXE%" -cp "%grisu_dir%\grid-client-core.jar;%grisu_dir%\grid-client-dependencies.jar" "grisu.frontend.view.swing.utils.ssh.wizard.NesiSetupWizard"
+REM	"%JAVA_EXE%" -cp "%grisu_dir%\grid-client-core.jar;%grisu_dir%\grid-client-dependencies.jar;%grisu_dir%\local-backend.jar" "grisu.frontend.view.swing.utils.ssh.wizard.NesiSetupWizard"
 
 REM )
 

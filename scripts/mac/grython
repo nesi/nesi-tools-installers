@@ -39,4 +39,4 @@ fi
 
 
 export X509_USER_PROXY="$HOME/.grid/grid.proxy"
-java -cp "$APPDIR/grid-client-core.jar:$APPDIR/grid-client-dependencies.jar" grisu.Grython "$@"
+java -cp "$APPDIR/grid-client-core.jar:$APPDIR/grid-client-dependencies.jar:$APPDIR/local-backend.jar" grisu.Grython "$@"
