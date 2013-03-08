@@ -1,48 +1,9 @@
-#!/bin/bash
+#! /bin/bash
 
-#unset DISPLAY
+LAUNCH_DIR=`dirname "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"`
+source "$LAUNCH_DIR/launch/prepare_cli.sh" "$@"
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-export GETDOWN_DIR="$DIR/../launch"
+MAIN_CLASS="grisu.Grython"
 
-timestamp_file=$GETDOWN_DIR/last_update
+"$JAVA_EXE" ${JAVA_OPTS} -cp "$GRID_CLIENT_CLASSPATH"  "$MAIN_CLASS" "$@"
 
-# checking whether user wants local backend
-ARGS="$@"
-shopt -s nocasematch
-if [[ ($ARGS =~ -b[\ \ *][local]) || ($ARGS =~ --backend[\ \ *][local]) ]]; then
-	touch "$GETDOWN_DIR/local-backend.dat"
-	java -Dsilent=true -jar "$GETDOWN_DIR/getdown-client.jar" "$GETDOWN_DIR"
-	touch "$timestamp_file"
-fi
-
-if [ ! -f "$GETDOWN_DIR/grid-client-core.jar" ]
-then
-    echo "First time run, downloading main application. This might take a little while..."
-    java -Dsilent=true -jar "$GETDOWN_DIR/getdown-client.jar" "$GETDOWN_DIR"
-else
-    # checking whether last update was in the last 24 hours
-    if [[ ( ! -f "$timestamp_file" ) || ( -n `find "$timestamp_file" -mmin +1440` ) ]]
-    then
-	echo "Checking for updates. This might take a while..."
-	java -Dsilent=true -jar "$GETDOWN_DIR/getdown-client.jar" "$DIR"
-    else 
-	echo "Not checking for update, already checked today..."
-    fi
-fi
-
-touch "$timestamp_file"
-
-export X509_USER_PROXY="$HOME/.grid/grid.proxy"
-#export JAVA_OPTS="-Djava.awt.headless=true -Xms64m -Xmx64m"
-
-# check whether we have our own jvm
-if [ -f "$GETDOWN_DIR/java_vm/bin/java" ]
-then
-	JAVA_EXE="$DIR/../launch/java_vm/bin/java"
-else
-	JAVA_EXE=`which java`
-fi
-
-
-"$JAVA_EXE" ${JAVA_OPTS} -cp "$GETDOWN_DIR/grid-client-core.jar:$GETDOWN_DIR/grid-client-dependencies.jar:$GETDOWN_DIR/local-backend.jar" grisu.Grython "$@"

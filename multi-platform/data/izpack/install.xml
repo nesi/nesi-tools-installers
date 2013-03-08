@@ -132,6 +132,14 @@
 				<os name="Linux" />
 			</executable>
 
+			<file src="scripts/linux/prepare_cli.sh" targetdir="$INSTALL_PATH/launch">
+				<os name="Linux" />
+			</file>
+			<executable targetfile="$INSTALL_PATH/launch/prepare_cli.sh"
+				keep="true" stage="never">
+				<os name="Linux" />
+			</executable>
+
 			<file src="scripts/linux/uninstall.sh" targetdir="$INSTALL_PATH/launch">
 				<os name="Linux" />
 			</file>

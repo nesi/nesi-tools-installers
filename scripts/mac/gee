@@ -5,6 +5,8 @@ JAVA_EXE="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Commands/j
 
 DIR="/Library/Application Support/gee"
 
+JAVA_ARGS="-Xmx64m"
+
 
 if [ ! -d "$GETDOWN_DIR" ]
 then
@@ -23,8 +25,9 @@ ARGS="$@"
 shopt -s nocasematch
 if [[ ($ARGS =~ -b[\ \ *][local]) || ($ARGS =~ --backend[\ \ *][local]) ]]; then
 	touch "$GETDOWN_DIR/local-backend.dat"
-	java -Dsilent=true -jar "$GETDOWN_DIR/getdown-client.jar" "$GETDOWN_DIR"
+	java -Dsilent=true -jar "$DIR/getdown-client.jar" "$GETDOWN_DIR"
 	touch "$timestamp_file"
+	JAVA_ARGS="-Xmx512m"
 fi
 
 if [ ! -f "$GETDOWN_DIR/grid-client-core.jar" ]
@@ -49,4 +52,4 @@ fi
 
 
 export X509_USER_PROXY="$HOME/.grid/grid.proxy"
-java -cp "$GETDOWN_DIR/grid-client-core.jar:$GETDOWN_DIR/grid-client-dependencies.jar:$GETDOWN_DIR/local-backend.jar" grisu.frontend.gee.Gee "$@"
+java "$JAVA_ARGS" -cp "$GETDOWN_DIR/grid-client-core.jar:$GETDOWN_DIR/grid-client-dependencies.jar:$GETDOWN_DIR/local-backend.jar" grisu.frontend.gee.Gee "$@"
