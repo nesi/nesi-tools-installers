@@ -8,7 +8,7 @@
 			<author name="Markus Binsteiner" email="m.binsteiner@auckland.ac.nz" />
 		</authors>
 		<javaversion>1.6</javaversion>
-		<run-privileged condition="izpack.windowsinstall|izpack.macinstall" />
+<!-- 		<run-privileged condition="izpack.windowsinstall|izpack.macinstall" /> -->
 	</info>
 	<guiprefs height="400" resizable="no" width="640">
 		<modifier key="useButtonIcons" value="yes" />
