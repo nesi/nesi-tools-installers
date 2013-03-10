@@ -699,7 +699,7 @@
     <ROW File="fontconfig.bfc" Component_="calendars.properties" FileName="fontco~2.bfc|fontconfig.bfc" Attributes="0" SourcePath="..\..\resources\windows\java_vm\lib\fontconfig.bfc" SelfReg="false" NextFile="fontconfig.properties.src"/>
     <ROW File="fontconfig.properties.src" Component_="calendars.properties" FileName="fontco~2.src|fontconfig.properties.src" Attributes="0" SourcePath="..\..\resources\windows\java_vm\lib\fontconfig.properties.src" SelfReg="false" NextFile="LucidaBrightDemiBold.ttf"/>
     <ROW File="fontmanager.dll" Component_="fontmanager.dll" FileName="fontma~1.dll|fontmanager.dll" Attributes="0" SourcePath="..\..\resources\windows\java_vm\bin\fontmanager.dll" SelfReg="false" NextFile="hpi.dll"/>
-    <ROW File="getdown.txt" Component_="getdownclient.jar" FileName="getdown.txt" Attributes="0" SourcePath="..\..\resources\dev\getdown.txt" SelfReg="false"/>
+    <ROW File="getdown.txt" Component_="getdownclient.jar" FileName="getdown.txt" Attributes="0" SourcePath="..\..\resources\getdown.txt" SelfReg="false"/>
     <ROW File="getdownclient.jar" Component_="getdownclient.jar" FileName="getdow~1.jar|getdown-client.jar" Attributes="0" SourcePath="..\..\resources\getdown-client.jar" SelfReg="false" NextFile="nesi.png"/>
     <ROW File="hpi.dll" Component_="hpi.dll" FileName="hpi.dll" Attributes="0" SourcePath="..\..\resources\windows\java_vm\bin\hpi.dll" SelfReg="false" NextFile="hprof.dll"/>
     <ROW File="hprof.dll" Component_="hprof.dll" FileName="hprof.dll" Attributes="0" SourcePath="..\..\resources\windows\java_vm\bin\hprof.dll" SelfReg="false" NextFile="instrument.dll"/>
