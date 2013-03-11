@@ -27,7 +27,7 @@ if [[ ($ARGS =~ -b[\ \ *][local]) || ($ARGS =~ --backend[\ \ *][local]) ]]; then
 	touch "$GETDOWN_DIR/local-backend.dat"
 	java -Dsilent=true -jar "$DIR/getdown-client.jar" "$GETDOWN_DIR"
 	touch "$timestamp_file"
-	JAVA_ARGS="-Xmx512m"
+	export JAVA_ARGS="-Xmx512m --XX:MaxPermSize=128M"
 fi
 
 if [ ! -f "$GETDOWN_DIR/grid-client-core.jar" ]
@@ -52,4 +52,4 @@ fi
 export GRID_CLIENT_CLASSPATH="$GETDOWN_DIR/grid-client-core.jar:$GETDOWN_DIR/grid-client-dependencies.jar:$GETDOWN_DIR/local-backend.jar"
 
 export X509_USER_PROXY="$HOME/.grid/grid.proxy"
-java "$JAVA_ARGS" -cp $GRID_CLIENT_CLASSPATH grisu.frontend.gee.Gee "$@"
+

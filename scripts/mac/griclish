@@ -1,5 +1,5 @@
 #!/bin/sh
 
-source "/Library/Application\ Support/griclish/prepare_cli.sh"
+source "/Library/Application Support/griclish/prepare_cli.sh"
 
-java -cp "$GRID_CLIENT_CLASSPATH" grisu.gricli.Gricli "$@"
+java "$JAVA_ARGS" -cp "$GRID_CLIENT_CLASSPATH" grisu.gricli.Gricli "$@"
