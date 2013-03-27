@@ -342,6 +342,46 @@
 
 		</pack>
 		
+		<pack name="Goji" required="no" preselected="no">
+			<description>Commandline shell to submit and monitor jobs
+			</description>
+			<file src="scripts/linux/goji" targetdir="$INSTALL_PATH/bin">
+				<os name="Linux" />
+			</file>
+			<executable targetfile="$INSTALL_PATH/bin/goji" keep="true"
+				stage="never">
+				<os name="Linux" />
+			</executable>
+
+			<file os="windows" src="scripts/windows/goji.bat" targetdir="$INSTALL_PATH/bin">
+				<os family="windows" />
+			</file>
+
+
+			<file src="mac/apps/goji/Goji.app/Contents/Info.plist" targetdir="$INSTALL_PATH/Goji.app/Contents">
+				<os name="Mac OS X" />
+			</file>
+			<file src="mac/apps/goji/Goji.app/Contents/Resources/icon.icns" targetdir="$INSTALL_PATH/Goji.app/Contents/Resources">
+				<os name="Mac OS X" />
+			</file>
+			<file src="mac/apps/goji/Goji.app/Contents/MacOS/goji-wrapper.sh" targetdir="$INSTALL_PATH/Goji.app/Contents/MacOS">
+				<os name="Mac OS X" />
+			</file>
+			<executable
+				targetfile="$INSTALL_PATH/Goji.app/Contents/MacOS/goji-wrapper.sh"
+				keep="true" stage="never">
+				<os name="Mac OS X" />
+			</executable>
+			<file src="scripts/mac/goji" targetdir="/usr/bin">
+				<os name="Mac OS X" />
+			</file>
+			<executable targetfile="/usr/bin/goji" keep="true"
+				stage="never">
+				<os name="Mac OS X" />
+			</executable>
+
+		</pack>		
+		
 		<pack name="Gee" required="no" preselected="no">
 			<description>Command line application to submit end-to-end tests
 			</description>
