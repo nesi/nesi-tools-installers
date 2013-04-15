@@ -7,5 +7,5 @@ CALL prepare.bat
 
 @echo Using proxy path: "%X509_USER_PROXY%"
 	
-%JAVA_EXE% %JAVA_OPTS% -cp "%GRID_CLIENT_CLASSPATH%" nz.org.nesi.goji.view.GojiCli %*
+%JAVA_EXE% %JAVA_OPTS% -cp "%GRID_CLIENT_CLASSPATH%" nz.org.nesi.goji.view.cli.GojiCli %*
 

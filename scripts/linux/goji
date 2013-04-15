@@ -3,6 +3,6 @@
 LAUNCH_DIR=`dirname "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"`
 source "$LAUNCH_DIR/launch/prepare_cli.sh" "$@"
 
-MAIN_CLASS="nz.org.nesi.goji.view.GojiCli"
+MAIN_CLASS="nz.org.nesi.goji.view.cli.GojiCli"
 
 "$JAVA_EXE" ${JAVA_OPTS} -cp "$GRID_CLIENT_CLASSPATH"  "$MAIN_CLASS" "$@"
