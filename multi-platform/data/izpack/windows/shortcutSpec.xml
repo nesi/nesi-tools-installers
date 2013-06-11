@@ -19,7 +19,7 @@
 
     <createForPack name="MobaXTerm"/>
   </shortcut>
-  
+
   <shortcut
     name="Grisu Template Client"
     target="$INSTALL_PATH\bin\grisu-template.vbs"
@@ -36,8 +36,8 @@
     startup="no">
 
     <createForPack name="Grisu Template Client"/>
-  </shortcut>  
-  
+  </shortcut>
+
   <shortcut
     name="Virtual Screening Client"
     target="$INSTALL_PATH\bin\grisu-virtscreen.vbs"
@@ -54,8 +54,8 @@
     startup="no">
 
     <createForPack name="Grisu Template Client"/>
-  </shortcut>    
-  
+  </shortcut>
+
   <shortcut
     name="Grid-Session Tray monitor"
     target="$INSTALL_PATH\bin\grid-tray.vbs"
@@ -72,8 +72,8 @@
     startup="no">
 
     <createForPack name="Grid-Tray"/>
-  </shortcut>    
-  
+  </shortcut>
+
   <shortcut
     name="Gricli"
     target="$INSTALL_PATH\bin\griclish.bat"
@@ -90,9 +90,9 @@
     startup="no">
 
     <createForPack name="Gricli"/>
-  </shortcut>    
+  </shortcut>
 
-  
+
   <shortcut
     name="Grython"
     target="$INSTALL_PATH\bin\grython.bat"
@@ -109,8 +109,8 @@
     startup="no">
 
     <createForPack name="Grython"/>
-  </shortcut>      
-  
+  </shortcut>
+
   <shortcut
     name="NeSI Setup"
     target="$INSTALL_PATH\bin\grid-settings.vbs"
@@ -127,9 +127,27 @@
     startup="no">
 
     <createForPack name="Core libraries"/>
-  </shortcut>      
-  
-  
+  </shortcut>
+
+  <shortcut
+    name="Envtest"
+    target="$INSTALL_PATH\bin\envtest.vbs"
+    commandLine=""
+    workingDirectory="$INSTALL_PATH\bin\"
+    description="Helper application to run tests which may help debug issues"
+    iconFile="$INSTALL_PATH\resources\nesi-icon.ico"
+    iconIndex="0"
+    initialState="normal"
+    programGroup="yes"
+    desktop="yes"
+    applications="no"
+    startMenu="no"
+    startup="no">
+
+    <createForPack name="Core libraries"/>
+  </shortcut>
+
+
 <shortcut
      name="Uninstall Nesi tools"
      programGroup="yes"
@@ -145,7 +163,7 @@
      iconIndex="0"
      description="NeSI tools uninstaller">
      <createForPack name="Core libraries" />
-   </shortcut>  
-  
-  
+   </shortcut>
+
+
 </shortcuts>

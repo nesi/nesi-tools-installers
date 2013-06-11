@@ -27,11 +27,11 @@
 		<langpack iso3="eng" />
 	</locale>
 	<resources>
-		<!-- <res id="LicencePanel.licence" src="izpack/resources/Licence.txt" 
+		<!-- <res id="LicencePanel.licence" src="izpack/resources/Licence.txt"
 			/> -->
 		<!-- <res id="HTMLHelloPanel.info" src="izpack/resources/Readme.html" /> -->
 		<!-- <res id="IZPackLogo" src="izpack/resources/logo-medium.png" /> -->
-		<!-- <res id="Installer.image" src="izpack/resources/installer_image.jpg" 
+		<!-- <res id="Installer.image" src="izpack/resources/installer_image.jpg"
 			/> -->
 		<res id="TargetPanel.dir.windows" src="windows/TargetDirWindows.txt" />
 		<res id="TargetPanel.dir.unix" src="linux/TargetDirUnix.txt" />
@@ -39,9 +39,9 @@
 
 		<res id="shortcutSpec.xml" src="windows/shortcutSpec.xml" />
 		<res id="Unix_shortcutSpec.xml" src="linux/unix_shortcut_spec.xml" />
-		
+
 <!-- 		<res id="RegistrySpec.xml" src="windows/RegistrySpec.xml"/> -->
-		
+
 	</resources>
 
 	<native type="izpack" name="ShellLink.dll">
@@ -90,7 +90,7 @@
 
 		<pack name="Core libraries" required="yes" preselected="yes">
 			<description>Core applications and libraries</description>
-			
+
 			<file src="version.txt" targetdir="$INSTALL_PATH/resources"/>
 
 			<file src="resources/getdown.txt" targetdir="$INSTALL_PATH/launch">
@@ -124,13 +124,20 @@
 				<os name="Linux" />
 			</file>
 
-			<file src="scripts/linux/nesi-setup" targetdir="$INSTALL_PATH/bin">
-				<os name="Linux" />
-			</file>
-			<executable targetfile="$INSTALL_PATH/bin/nesi-setup"
-				keep="true" stage="never">
-				<os name="Linux" />
-			</executable>
+            <file src="scripts/linux/nesi-setup" targetdir="$INSTALL_PATH/bin">
+                <os name="Linux" />
+            </file>
+            <executable targetfile="$INSTALL_PATH/bin/nesi-setup"
+                        keep="true" stage="never">
+                <os name="Linux" />
+            </executable>
+            <file src="scripts/linux/envtest" targetdir="$INSTALL_PATH/bin">
+                <os name="Linux" />
+            </file>
+            <executable targetfile="$INSTALL_PATH/bin/envtest"
+                        keep="true" stage="never">
+                <os name="Linux" />
+            </executable>
 
 			<file src="scripts/linux/prepare_cli.sh" targetdir="$INSTALL_PATH/launch">
 				<os name="Linux" />
@@ -152,12 +159,19 @@
 			<file os="windows" src="scripts/windows/prepare.bat" targetdir="$INSTALL_PATH/bin">
 				<os family="windows" />
 			</file>
-			<file os="windows" src="scripts/windows/grid-settings.bat" targetdir="$INSTALL_PATH/bin">
-				<os family="windows" />
-			</file>
-			<file os="windows" src="scripts/windows/grid-settings.vbs" targetdir="$INSTALL_PATH/bin">
-				<os family="windows" />
-			</file>
+            <file os="windows" src="scripts/windows/grid-settings.bat" targetdir="$INSTALL_PATH/bin">
+                <os family="windows" />
+            </file>
+            <file os="windows" src="scripts/windows/grid-settings.vbs" targetdir="$INSTALL_PATH/bin">
+                <os family="windows" />
+            </file>
+
+            <file os="windows" src="scripts/windows/envtest.bat" targetdir="$INSTALL_PATH/bin">
+                <os family="windows" />
+            </file>
+            <file os="windows" src="scripts/windows/envtest.vbs" targetdir="$INSTALL_PATH/bin">
+                <os family="windows" />
+            </file>
 
 			<file os="windows" src="resources/getdown-client.jar" targetdir="$INSTALL_PATH/resources">
 				<os family="windows" />
@@ -222,28 +236,54 @@
 
 
 
-			<file src="mac/apps/nesi-setup/NeSI-Setup.app/Contents/Info.plist" targetdir="$INSTALL_PATH/NeSI-Setup.app/Contents">
-				<os name="Mac OS X" />
-			</file>
-			<file src="mac/apps/nesi-setup/NeSI-Setup.app/Contents/Resources/icon.icns" targetdir="$INSTALL_PATH/NeSI-Setup.app/Contents/Resources">
-				<os name="Mac OS X" />
-			</file>
-			<file src="scripts/mac/nesi-setup" targetdir="/usr/bin">
-				<os name="Mac OS X" />
-			</file>
-			<executable targetfile="/usr/bin/nesi-setup" keep="true" stage="never">
-				<os name="Mac OS X" />
-			</executable>
-			<file src="mac/apps/nesi-setup/NeSI-Setup.app/Contents/MacOS/nesi-setup-wrapper.sh" targetdir="$INSTALL_PATH/NeSI-Setup.app/Contents/MacOS">
-				<os name="Mac OS X" />
-			</file>
-			<executable
-				targetfile="$INSTALL_PATH/NeSI-Setup.app/Contents/MacOS/nesi-setup-wrapper.sh" keep="true" stage="never">
-				<os name="Mac OS X" />
-			</executable>
-		</pack>
+            <file src="mac/apps/nesi-setup/NeSI-Setup.app/Contents/Info.plist" targetdir="$INSTALL_PATH/NeSI-Setup.app/Contents">
+                <os name="Mac OS X" />
+            </file>
+            <file src="mac/apps/nesi-setup/NeSI-Setup.app/Contents/Resources/icon.icns" targetdir="$INSTALL_PATH/NeSI-Setup.app/Contents/Resources">
+                <os name="Mac OS X" />
+            </file>
+            <file src="scripts/mac/nesi-setup" targetdir="/usr/bin">
+                <os name="Mac OS X" />
+            </file>
+            <executable targetfile="/usr/bin/nesi-setup" keep="true" stage="never">
+                <os name="Mac OS X" />
+            </executable>
+            <file src="mac/apps/nesi-setup/NeSI-Setup.app/Contents/MacOS/nesi-setup-wrapper.sh" targetdir="$INSTALL_PATH/NeSI-Setup.app/Contents/MacOS">
+                <os name="Mac OS X" />
+            </file>
+            <executable
+                    targetfile="$INSTALL_PATH/NeSI-Setup.app/Contents/MacOS/nesi-setup-wrapper.sh" keep="true" stage="never">
+                <os name="Mac OS X" />
+            </executable>
 
-		<pack name="MobaXTerm" os="windows" required="no" preselected="yes">
+
+
+            <file src="mac/apps/envtest/Envtest.app/Contents/Info.plist"
+                  targetdir="$INSTALL_PATH/Envtest.app/Contents">
+                <os name="Mac OS X"/>
+            </file>
+            <file src="mac/apps/envtest/Envtest.app/Contents/Resources/icon.icns"
+                  targetdir="$INSTALL_PATH/NeSI-Setup.app/Contents/Resources">
+                <os name="Mac OS X"/>
+            </file>
+            <file src="scripts/mac/envtest" targetdir="/usr/bin">
+                <os name="Mac OS X"/>
+            </file>
+            <executable targetfile="/usr/bin/envtest" keep="true" stage="never">
+                <os name="Mac OS X"/>
+            </executable>
+            <file src="mac/apps/envtest/Envtest.app/Contents/MacOS/envtest-wrapper.sh"
+                  targetdir="$INSTALL_PATH/Envtest.app/Contents/MacOS">
+                <os name="Mac OS X"/>
+            </file>
+            <executable
+                    targetfile="$INSTALL_PATH/Envtest.app/Contents/MacOS/nesi-wrapper.sh" keep="true"
+                    stage="never">
+                <os name="Mac OS X"/>
+            </executable>
+        </pack>
+
+        <pack name="MobaXTerm" os="windows" required="no" preselected="yes">
 			<description>SSH terminal application to access login nodes
 			</description>
 
@@ -341,7 +381,7 @@
 			</executable>
 
 		</pack>
-		
+
 		<pack name="Goji" required="no" preselected="no">
 			<description>Commandline shell to submit and monitor jobs
 			</description>
@@ -380,8 +420,8 @@
 				<os name="Mac OS X" />
 			</executable>
 
-		</pack>		
-		
+		</pack>
+
 		<pack name="Gee" required="no" preselected="no">
 			<description>Command line application to submit end-to-end tests
 			</description>
@@ -424,7 +464,7 @@
 			</executable>
 
 		</pack>
-	
+
 		<pack name="Grisu-Benchmark" required="no" preselected="no">
 			<description>Command line application to submit series of benchmarks
 			</description>
@@ -515,8 +555,8 @@
 				<os name="Mac OS X" />
 			</executable>
 
-		</pack>		
-		
+		</pack>
+
 
 <!-- 		<pack name="Grid-Tray" required="no" preselected="no"> -->
 <!-- 			<description>A tray application that lets you manage your grid -->
@@ -652,7 +692,7 @@
 			</file>
 			<file os="windows" src="scripts/windows/prepare_phyml.bat" targetdir="$INSTALL_PATH/bin">
 				<os family="windows" />
-			</file>			
+			</file>
 			<file os="windows" src="scripts/windows/phyml-grid.vbs" targetdir="$INSTALL_PATH/bin">
 				<os family="windows" />
 			</file>

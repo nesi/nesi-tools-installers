@@ -2,7 +2,7 @@
   <skipIfNotSupported/>
   <programGroup defaultName="NeSI"
                 location="applications"/>
-                
+
    <shortcut
      name="Grisu Template Client"
      programGroup="yes"
@@ -23,8 +23,8 @@
      initialState="normal">
      <createForPack name="Grisu Template Client"/>
    </shortcut>
-   
- 
+
+
      <shortcut
      name="Virtual Screening Client"
      programGroup="yes"
@@ -45,7 +45,7 @@
      initialState="normal">
      <createForPack name="Virtual Screening Client"/>
    </shortcut>
-   
+
    <shortcut
      name="Grid-Tray"
      programGroup="yes"
@@ -65,8 +65,8 @@
      KdeSubstUID="false"
      initialState="normal">
      <createForPack name="Grid-Tray"/>
-   </shortcut>   
-   
+   </shortcut>
+
    <shortcut
      name="Griclish"
      programGroup="yes"
@@ -86,8 +86,8 @@
      KdeSubstUID="false"
      initialState="normal">
      <createForPack name="Gricli"/>
-   </shortcut>   
-   
+   </shortcut>
+
    <shortcut
      name="Grid-Session"
      programGroup="yes"
@@ -107,8 +107,8 @@
      KdeSubstUID="false"
      initialState="normal">
      <createForPack name="Grid-Tray"/>
-   </shortcut>      
-   
+   </shortcut>
+
    <shortcut
      name="Grython"
      programGroup="yes"
@@ -128,8 +128,8 @@
      KdeSubstUID="false"
      initialState="normal">
      <createForPack name="Grython"/>
-   </shortcut>     
-   
+   </shortcut>
+
    <shortcut
      name="NeSI Setup"
      programGroup="yes"
@@ -149,9 +149,31 @@
      KdeSubstUID="false"
      initialState="normal">
      <createForPack name="Core libraries"/>
-   </shortcut>      
+   </shortcut>
 
-  
+   <shortcut
+     name="Envtest"
+     programGroup="yes"
+     desktop="yes"
+     applications="no"
+     startMenu="no"
+     startup="no"
+     target="$INSTALL_PATH/bin/envtest"
+     commandLine=""
+     description="Helper application to run some tests which can help debug problems"
+     workingDirectory="$INSTALL_PATH/bin"
+	 iconFile="$INSTALL_PATH/resources/nesi-icon.png"
+     iconIndex="0"
+     type="Application"
+     encoding="UTF-8"
+     terminal="false"
+     KdeSubstUID="false"
+     initialState="normal">
+     <createForPack name="Core libraries"/>
+   </shortcut>
+
+
+
    <shortcut
      name="Uninstall Nesi Tools"
      programGroup="yes"
@@ -172,6 +194,6 @@
      initialState="normal">
      <createForPack name="Core libraries"/>
    </shortcut>
-  
-  
+
+
 </shortcuts>
