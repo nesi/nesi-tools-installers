@@ -409,6 +409,9 @@
             <file os="windows" src="scripts/windows/idrop.vbs" targetdir="$INSTALL_PATH/bin">
                 <os family="windows" />
             </file>
+            <file os="windows" src="scripts/windows/prepare_idrop.bat" targetdir="$INSTALL_PATH/bin">
+                <os family="windows" />
+            </file>
 
 
             <file src="mac/apps/idrop/iDrop.app/Contents/Info.plist" targetdir="$INSTALL_PATH/iDrop.app/Contents">

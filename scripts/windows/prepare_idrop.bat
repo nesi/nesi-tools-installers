@@ -25,7 +25,7 @@ if NOT EXIST "%getdown_txt_target%" (
 )
 
 set nesi_png=%dir%\nesi.png
-set nesi_png_source=%GRISU_HOME%\resources\idrop\nesi.png
+set nesi_png_source=%GRISU_HOME%\resources\nesi.png
 if NOT EXIST "%nesi_png%" (
     COPY "%nesi_png_source%" "%dir%\nesi.png"
 )
