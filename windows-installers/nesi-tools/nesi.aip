@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <DOCUMENT Type="Advanced Installer" CreateVersion="9.7" version="10.2" Modules="simple" RootPath="." Language="en" Id="{0F7D50C6-A7E0-403B-8346-00AF709CB962}">
   <COMPONENT cid="caphyon.advinst.msicomp.MsiValidationComponent">
-    <ROW Table="File" Column="Sequence" MinValue="1" MaxValue="32767" Description="Sequence with respect to the media images; order must track cabinet order." Options="0" ColumnType="2" ColumnIndex="7" ColumnSize="2" MsiKey="File#Sequence"/>
-    <ROW Table="Media" Column="LastSequence" MinValue="0" MaxValue="32767" Description="File sequence number for the last file for this media." Options="0" ColumnType="2" ColumnIndex="1" ColumnSize="2" MsiKey="Media#LastSequence"/>
+    <ROW Table="File" Column="Sequence" MinValue="1" MaxValue="2147483647" Description="Sequence with respect to the media images; order must track cabinet order." Options="0" ColumnType="3" ColumnIndex="7" ColumnSize="4" MsiKey="File#Sequence"/>
+    <ROW Table="Media" Column="LastSequence" MinValue="0" MaxValue="2147483647" Description="File sequence number for the last file for this media." Options="0" ColumnType="3" ColumnIndex="1" ColumnSize="4" MsiKey="Media#LastSequence"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
     <ROW Property="ALLUSERS" Value="1" MultiBuildValue="DefaultBuild:2"/>
@@ -13,10 +13,10 @@
     <ROW Property="ARPURLUPDATEINFO" Value="http://code.ceres.auckland.ac.nz/downloads/nesi/"/>
     <ROW Property="CTRLS" Value="1"/>
     <ROW Property="Manufacturer" Value="NeSI"/>
-    <ROW Property="ProductCode" Value="1033:{F914E81E-4C06-4066-B106-E0AFBCEBC7FE} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{F0AAD407-4F65-4448-B442-0E873373D346} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="NeSI tools"/>
-    <ROW Property="ProductVersion" Value="0.5.2" Type="32"/>
+    <ROW Property="ProductVersion" Value="0.7" Type="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
     <ROW Property="UpgradeCode" Value="{7E9F4060-EC6A-47C4-8270-67B780E8BF0C}"/>
     <ROW Property="VIEWREADME" Value="1" Type="4"/>
