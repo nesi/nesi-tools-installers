@@ -382,6 +382,60 @@
 
 		</pack>
 
+        <pack name="iDrop" required="no" preselected="no">
+            <description>DataFabric desktop client</description>
+
+            <file src="resources/idrop/getdown.txt" targetdir="$INSTALL_PATH/launch/idrop">
+                <os name="Linux" />
+            </file>
+			<file src="resources/nesi.png" targetdir="$INSTALL_PATH/launch/idrop">
+				<os name="Linux" />
+			</file>
+
+            <file src="scripts/linux/idrop" targetdir="$INSTALL_PATH/bin">
+                <os name="Linux" />
+            </file>
+            <executable targetfile="$INSTALL_PATH/bin/idrop"
+                        keep="true" stage="never">
+                <os name="Linux" />
+            </executable>
+
+			<file os="windows" src="resources/idrop/getdown.txt" targetdir="$INSTALL_PATH/resources/idrop">
+				<os family="windows" />
+			</file>
+            <file os="windows" src="scripts/windows/idrop.bat" targetdir="$INSTALL_PATH/bin">
+                <os family="windows" />
+            </file>
+            <file os="windows" src="scripts/windows/idrop.vbs" targetdir="$INSTALL_PATH/bin">
+                <os family="windows" />
+            </file>
+
+
+            <file src="mac/apps/idrop/iDrop.app/Contents/Info.plist" targetdir="$INSTALL_PATH/iDrop.app/Contents">
+                <os name="Mac OS X" />
+            </file>
+            <file src="mac/apps/idrop/iDrop.app/Contents/Resources/icon.icns" targetdir="$INSTALL_PATH/iDrop.app/Contents/Resources">
+                <os name="Mac OS X" />
+            </file>
+            <file src="scripts/mac/idrop" targetdir="/usr/bin">
+                <os name="Mac OS X" />
+            </file>
+            <executable targetfile="/usr/bin/idrop" keep="true"
+                        stage="never">
+                <os name="Mac OS X" />
+            </executable>
+            <file src="mac/apps/idrop/iDrop.app/Contents/MacOS/idrop-wrapper.sh"
+                  targetdir="$INSTALL_PATH/iDrop.app/Contents/MacOS">
+                <os name="Mac OS X" />
+            </file>
+            <executable
+                    targetfile="$INSTALL_PATH/iDrop.app/Contents/MacOS/idrop-wrapper.sh"
+                    keep="true" stage="never">
+                <os name="Mac OS X" />
+            </executable>
+
+        </pack>
+
 		<pack name="Goji" required="no" preselected="no">
 			<description>Commandline shell to submit and monitor jobs
 			</description>

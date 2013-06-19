@@ -46,6 +46,27 @@
      <createForPack name="Virtual Screening Client"/>
    </shortcut>
 
+    <shortcut
+            name="iDrop"
+            programGroup="yes"
+            desktop="yes"
+            applications="no"
+            startMenu="no"
+            startup="no"
+            target="$INSTALL_PATH/bin/idrop"
+            commandLine=""
+            description="A GUI for the NeSI DataFabric"
+            workingDirectory="$INSTALL_PATH/bin"
+            iconFile="$INSTALL_PATH/resources/nesi-icon.png"
+            iconIndex="0"
+            type="Application"
+            encoding="UTF-8"
+            terminal="false"
+            KdeSubstUID="false"
+            initialState="normal">
+        <createForPack name="iDrop"/>
+    </shortcut>
+
    <shortcut
      name="Grid-Tray"
      programGroup="yes"
