@@ -1,5 +1,5 @@
 #!/bin/sh
 
-source "/Library/Application Support/griclish/prepare_cli.sh"
+source "/Library/Application Support/goji/prepare_cli.sh"
 
 java "$JAVA_ARGS" -cp "$GRID_CLIENT_CLASSPATH" nz.org.nesi.goji.view.cli.GojiCli "$@"
