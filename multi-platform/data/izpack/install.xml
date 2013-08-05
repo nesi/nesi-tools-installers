@@ -398,24 +398,24 @@
 				<os family="windows" />
 			</file>
 
-			<file src="mac/apps/grython/Grython.app/Contents/Info.plist" targetdir="$INSTALL_PATH/Grython.app/Contents">
+			<file src="mac/apps/grython/Grisu CLI.app/Contents/Info.plist" targetdir="$INSTALL_PATH/Grisu CLI.app/Contents">
 				<os name="Mac OS X" />
 			</file>
-			<file src="mac/apps/grython/Grython.app/Contents/Resources/icon.icns" targetdir="$INSTALL_PATH/Grython.app/Contents/Resources">
+			<file src="mac/apps/grython/Grisu CLI.app/Contents/Resources/icon.icns" targetdir="$INSTALL_PATH/Grisu CLI.app/Contents/Resources">
 				<os name="Mac OS X" />
 			</file>
-			<file src="mac/apps/grython/Grython.app/Contents/MacOS/grython-wrapper.sh" targetdir="$INSTALL_PATH/Grython.app/Contents/MacOS">
+			<file src="mac/apps/grython/Grisu CLI.app/Contents/MacOS/grisu-wrapper.sh" targetdir="$INSTALL_PATH/Grisu CLI.app/Contents/MacOS">
 				<os name="Mac OS X" />
 			</file>
 			<executable
-				targetfile="$INSTALL_PATH/Grython.app/Contents/MacOS/grython-wrapper.sh"
+				targetfile="$INSTALL_PATH/Grisu CLI.app/Contents/MacOS/grisu-wrapper.sh"
 				keep="true" stage="never">
 				<os name="Mac OS X" />
 			</executable>
-			<file src="scripts/mac/grython" targetdir="/usr/bin">
+			<file src="scripts/mac/grisu" targetdir="/usr/bin">
 				<os name="Mac OS X" />
 			</file>
-			<executable targetfile="/usr/bin/grython" keep="true"
+			<executable targetfile="/usr/bin/grisu" keep="true"
 				stage="never">
 				<os name="Mac OS X" />
 			</executable>
