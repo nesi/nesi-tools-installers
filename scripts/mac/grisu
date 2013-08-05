@@ -1,0 +1,5 @@
+#!/bin/sh
+
+source "/Library/Application Support/grisu/prepare_cli.sh"
+
+java "$JAVA_ARGS" -cp "$GRID_CLIENT_CLASSPATH" Grisu "$@"

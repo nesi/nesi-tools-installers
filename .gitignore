@@ -22,4 +22,5 @@ rebel.xml
 grisu-server.config
 multi-platform/target/*
 multi-platform/.settings/*
-
+**iml
+.idea
