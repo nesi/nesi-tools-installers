@@ -130,6 +130,26 @@
 			<key>UUID</key>
 			<string>6FDC2A95-EBBA-4238-A997-5971DCA34DEB</string>
 		</dict>
+		<dict>
+			<key>PACKAGE_SETTINGS</key>
+			<dict>
+				<key>LOCATION</key>
+				<integer>0</integer>
+				<key>NAME</key>
+				<string>idrop</string>
+			</dict>
+			<key>PATH</key>
+			<dict>
+				<key>PATH</key>
+				<string>../idrop/build/idrop.pkg</string>
+				<key>PATH_TYPE</key>
+				<integer>1</integer>
+			</dict>
+			<key>TYPE</key>
+			<integer>1</integer>
+			<key>UUID</key>
+			<string>9824EE0A-670F-485E-A739-7214AB1EAE6F</string>
+		</dict>
 	</array>
 	<key>PROJECT</key>
 	<dict>
@@ -306,6 +326,27 @@
 								<integer>0</integer>
 								<key>UUID</key>
 								<string>9B5167C8-3144-48A3-91C5-9533345F18A8</string>
+							</dict>
+							<dict>
+								<key>DESCRIPTION</key>
+								<array/>
+								<key>OPTIONS</key>
+								<dict>
+									<key>HIDDEN</key>
+									<false/>
+									<key>STATE</key>
+									<integer>1</integer>
+								</dict>
+								<key>PACKAGE_UUID</key>
+								<string>9824EE0A-670F-485E-A739-7214AB1EAE6F</string>
+								<key>TITLE</key>
+								<array/>
+								<key>TOOLTIP</key>
+								<array/>
+								<key>TYPE</key>
+								<integer>0</integer>
+								<key>UUID</key>
+								<string>2B2C1CB0-49A7-46F4-825E-ED23E72CD3F5</string>
 							</dict>
 						</array>
 						<key>REMOVED</key>

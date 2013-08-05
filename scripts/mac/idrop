@@ -3,7 +3,7 @@
 APPDIR="$HOME/Library/Application Support/NeSI/idrop"
 JAVA_EXE="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Commands/java"
 
-DIR="/Library/Application Support/idrop"
+DIR="/Library/Application Support/NeSI/idrop"
 
 if [ ! -d "$APPDIR" ]
 then
