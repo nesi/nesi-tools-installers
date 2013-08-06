@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<DOCUMENT Type="Advanced Installer" CreateVersion="9.7" version="10.2" Modules="simple" RootPath="." Language="en" Id="{0F7D50C6-A7E0-403B-8346-00AF709CB962}">
+<DOCUMENT Type="Advanced Installer" CreateVersion="9.7" version="10.3" Modules="simple" RootPath="." Language="en" Id="{0F7D50C6-A7E0-403B-8346-00AF709CB962}">
   <COMPONENT cid="caphyon.advinst.msicomp.MsiValidationComponent">
     <ROW Table="File" Column="Sequence" MinValue="1" MaxValue="2147483647" Description="Sequence with respect to the media images; order must track cabinet order." Options="0" ColumnType="3" ColumnIndex="7" ColumnSize="4" MsiKey="File#Sequence"/>
     <ROW Table="Media" Column="LastSequence" MinValue="0" MaxValue="2147483647" Description="File sequence number for the last file for this media." Options="0" ColumnType="3" ColumnIndex="1" ColumnSize="4" MsiKey="Media#LastSequence"/>
@@ -13,10 +13,10 @@
     <ROW Property="ARPURLUPDATEINFO" Value="http://code.ceres.auckland.ac.nz/downloads/nesi/"/>
     <ROW Property="CTRLS" Value="1"/>
     <ROW Property="Manufacturer" Value="NeSI"/>
-    <ROW Property="ProductCode" Value="1033:{F0AAD407-4F65-4448-B442-0E873373D346} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{D5193D2A-10B9-4051-BCD6-B5BAA6341EC0} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="NeSI tools"/>
-    <ROW Property="ProductVersion" Value="0.7" Type="32"/>
+    <ROW Property="ProductVersion" Value="0.7.4" Type="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
     <ROW Property="UpgradeCode" Value="{7E9F4060-EC6A-47C4-8270-67B780E8BF0C}"/>
     <ROW Property="VIEWREADME" Value="1" Type="4"/>
@@ -715,12 +715,13 @@
     <ROW File="fontconfig.properties.src" Component_="calendars.properties" FileName="fontco~2.src|fontconfig.properties.src" Attributes="0" SourcePath="..\..\resources\windows\java_vm\lib\fontconfig.properties.src" SelfReg="false" NextFile="LucidaBrightDemiBold.ttf"/>
     <ROW File="fontmanager.dll" Component_="fontmanager.dll" FileName="fontma~1.dll|fontmanager.dll" Attributes="0" SourcePath="..\..\resources\windows\java_vm\bin\fontmanager.dll" SelfReg="false" NextFile="hpi.dll"/>
     <ROW File="getdown.txt" Component_="getdownclient.jar" FileName="getdown.txt" Attributes="0" SourcePath="..\..\resources\getdown.txt" SelfReg="false" NextFile="getdownclient.jar"/>
-    <ROW File="getdown.txt_1" Component_="getdown.txt" FileName="getdown.txt" Attributes="0" SourcePath="..\..\resources\idrop\getdown.txt" SelfReg="false"/>
+    <ROW File="getdown.txt_1" Component_="getdown.txt" FileName="getdown.txt" Attributes="0" SourcePath="..\..\resources\idrop\getdown.txt" SelfReg="false" NextFile="grisu.bat"/>
     <ROW File="getdownclient.jar" Component_="getdownclient.jar" FileName="getdow~1.jar|getdown-client.jar" Attributes="0" SourcePath="..\..\resources\getdown-client.jar" SelfReg="false" NextFile="nesi.png"/>
     <ROW File="gricliicon.ico" Component_="getdownclient.jar" FileName="gricli~1.ico|gricli-icon.ico" Attributes="0" SourcePath="..\..\resources\gricli-icon.ico" SelfReg="false" NextFile="grisuicon.ico"/>
     <ROW File="griclish.bat" Component_="griclish.bat" FileName="griclish.bat" Attributes="0" SourcePath="..\..\scripts\windows\griclish.bat" SelfReg="false" NextFile="grisutemplate.bat"/>
     <ROW File="gridtray.bat" Component_="griclish.bat" FileName="grid-t~1.bat|grid-tray.bat" Attributes="0" SourcePath="..\..\scripts\windows\grid-tray.bat" SelfReg="false" NextFile="gridtray.vbs"/>
     <ROW File="gridtray.vbs" Component_="gridtray.vbs" FileName="grid-t~1.vbs|grid-tray.vbs" Attributes="0" SourcePath="..\..\scripts\windows\grid-tray.vbs" SelfReg="false" NextFile="Readme.txt_1"/>
+    <ROW File="grisu.bat" Component_="griclish.bat" FileName="grisu.bat" Attributes="0" SourcePath="..\..\scripts\windows\grisu.bat" SelfReg="false"/>
     <ROW File="grisuicon.ico" Component_="getdownclient.jar" FileName="grisu-~1.ico|grisu-icon.ico" Attributes="0" SourcePath="..\..\resources\grisu-icon.ico" SelfReg="false" NextFile="grythonicon.ico"/>
     <ROW File="grisutemplate.bat" Component_="griclish.bat" FileName="grisu-~2.bat|grisu-template.bat" Attributes="0" SourcePath="..\..\scripts\windows\grisu-template.bat" SelfReg="false" NextFile="grisutemplate.vbs"/>
     <ROW File="grisutemplate.vbs" Component_="grisutemplate.vbs" FileName="grisu-~1.vbs|grisu-template.vbs" Attributes="0" SourcePath="..\..\scripts\windows\grisu-template.vbs" SelfReg="false" NextFile="grython.bat"/>

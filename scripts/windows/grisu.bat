@@ -7,5 +7,5 @@ CALL prepare.bat
 
 @echo Using proxy path: "%X509_USER_PROXY%"
 	
-%JAVA_EXE% %JAVA_OPTS% -cp "%GRID_CLIENT_CLASSPATH%" grisu.gricli.Gricli %*
+%JAVA_EXE% %JAVA_OPTS% -cp "%GRID_CLIENT_CLASSPATH%" Grisu %*
 
