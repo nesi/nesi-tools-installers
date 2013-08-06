@@ -42,7 +42,7 @@ else
 	#echo "Checking for updates. This might take a while..."
 	java -Dsilent=true -jar "$DIR/getdown-client.jar" "$GETDOWN_DIR"
 	touch "$timestamp_file"
-    else
+    #else
 	#echo "Not checking for update, already checked today..."
     fi
 
