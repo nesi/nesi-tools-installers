@@ -398,17 +398,17 @@
 				<os family="windows" />
 			</file>
 
-			<file src="mac/apps/grython/Grisu CLI.app/Contents/Info.plist" targetdir="$INSTALL_PATH/Grisu CLI.app/Contents">
+			<file src="mac/apps/grisu cli/Grisu cli.app/Contents/Info.plist" targetdir="$INSTALL_PATH/Grisu cli.app/Contents">
 				<os name="Mac OS X" />
 			</file>
-			<file src="mac/apps/grython/Grisu CLI.app/Contents/Resources/icon.icns" targetdir="$INSTALL_PATH/Grisu CLI.app/Contents/Resources">
+			<file src="mac/apps/grisu cli/Grisu cli.app/Contents/Resources/icon.icns" targetdir="$INSTALL_PATH/Grisu cli.app/Contents/Resources">
 				<os name="Mac OS X" />
 			</file>
-			<file src="mac/apps/grython/Grisu CLI.app/Contents/MacOS/grisu-wrapper.sh" targetdir="$INSTALL_PATH/Grisu CLI.app/Contents/MacOS">
+			<file src="mac/apps/grisu cli/Grisu cli.app/Contents/MacOS/grisu-wrapper.sh" targetdir="$INSTALL_PATH/Grisu cli.app/Contents/MacOS">
 				<os name="Mac OS X" />
 			</file>
 			<executable
-				targetfile="$INSTALL_PATH/Grisu CLI.app/Contents/MacOS/grisu-wrapper.sh"
+				targetfile="$INSTALL_PATH/Grisu cli.app/Contents/MacOS/grisu-wrapper.sh"
 				keep="true" stage="never">
 				<os name="Mac OS X" />
 			</executable>
