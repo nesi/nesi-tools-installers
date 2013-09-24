@@ -22,5 +22,5 @@ fi
 
 
 export X509_USER_PROXY="$HOME/.grid/grid.proxy"
-$JAVA_EXE -jar "$DIR/getdown-client.jar" "$APPDIR"
+$JAVA_EXE -Dconnect_timeout=12 -jar "$DIR/getdown-client.jar" "$APPDIR"
 

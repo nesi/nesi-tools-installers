@@ -6,7 +6,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 export GETDOWN_DIR="$DIR/../launch"
 
 
-export JAVA_OPTS="-Djava.awt.headless=true -Xms64m -Xmx64m"
+export JAVA_OPTS="-Djava.awt.headless=true -Xms64m -Xmx64m -Dconnect_timeout=12"
 
 timestamp_file=$GETDOWN_DIR/last_update
 
@@ -18,7 +18,7 @@ if [[ ($ARGS =~ -b[\ \ *][local]) || ($ARGS =~ --backend[\ \ *][local]) ]]; then
 	#echo "Checking whether local backend is available and up to date..."
 	java -Dsilent=true -jar "$GETDOWN_DIR/getdown-client.jar" "$GETDOWN_DIR"
 	touch "$timestamp_file"
-	JAVA_OPTS="-Djava.awt.headless=true -Xms128m -Xmx512m"
+	JAVA_OPTS="-Djava.awt.headless=true -Xms128m -Xmx512m -Dconnect_timeout=12"
 fi
 
 if [ ! -f "$GETDOWN_DIR/grid-client-core.jar" ]

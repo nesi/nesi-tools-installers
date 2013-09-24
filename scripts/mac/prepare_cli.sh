@@ -5,7 +5,7 @@ export JAVA_EXE="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Com
 
 export DIR="/Library/Application Support/gee"
 
-export JAVA_ARGS="-Xmx64m"
+export JAVA_ARGS="-Xmx64m -Dconnect_timeout=12"
 
 
 if [ ! -d "$GETDOWN_DIR" ]
@@ -27,7 +27,7 @@ if [[ ($ARGS =~ -b[\ \ *][local]) || ($ARGS =~ --backend[\ \ *][local]) ]]; then
 	touch "$GETDOWN_DIR/local-backend.dat"
 	java -Dsilent=true -jar "$DIR/getdown-client.jar" "$GETDOWN_DIR"
 	touch "$timestamp_file"
-	export JAVA_ARGS="-Xmx512m --XX:MaxPermSize=128M"
+	export JAVA_ARGS="-Xmx512m --XX:MaxPermSize=128M -Dconnect_timeout=12"
 fi
 
 if [ ! -f "$GETDOWN_DIR/grid-client-core.jar" ]

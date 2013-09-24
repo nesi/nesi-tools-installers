@@ -5,4 +5,4 @@ export GETDOWN_DIR="$DIR/../launch/idrop"
 
 
 export X509_USER_PROXY="$HOME/.grid/grid.proxy"
-java -jar "$DIR/../launch/getdown-client.jar" "$DIR/../launch/idrop"
+java -Dconnect_timeout=12 -jar "$DIR/../launch/getdown-client.jar" "$DIR/../launch/idrop"

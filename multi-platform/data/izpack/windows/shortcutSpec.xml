@@ -38,13 +38,14 @@
         <createForPack name="Grisu Template Client"/>
     </shortcut>
 
+
     <shortcut
-            name="Virtual Screening Client"
-            target="$INSTALL_PATH\bin\grisu-virtscreen.vbs"
+            name="PhyML GUI"
+            target="$INSTALL_PATH\bin\phyml-grid.vbs"
             commandLine=""
             workingDirectory="$INSTALL_PATH\bin\"
-            description="This starts an instance of the Virtual Screening Client"
-            iconFile="$INSTALL_PATH\resources\virtscreen-icon.ico"
+            description="This starts an instance of the PhyML GUI"
+            iconFile="$INSTALL_PATH\resources\grisu-icon.ico"
             iconIndex="0"
             initialState="normal"
             programGroup="yes"
@@ -53,7 +54,7 @@
             startMenu="no"
             startup="no">
 
-        <createForPack name="Grisu Template Client"/>
+        <createForPack name="Phyml-grid client"/>
     </shortcut>
 
     <shortcut

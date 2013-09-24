@@ -21,7 +21,7 @@ timestamp_file=$APPDIR/last_update
 if [ ! -f "$APPDIR/grid-client-core.jar" ]
 then
     echo "First time run, downloading main application. This might take a little while..."
-    java -Dsilent=true -jar "$DIR/getdown-client.jar" "$APPDIR"
+    java -Dconnect_timeout=12 -Dsilent=true -jar "$DIR/getdown-client.jar" "$APPDIR"
     touch "$timestamp_file"
 else
     # checking whether last update was in the last 24 hours

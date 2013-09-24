@@ -49,10 +49,13 @@ set GRID_CLIENT_CLASSPATH=%dir%\grid-client-core.jar;%dir%\grid-client-dependenc
 
 set GETDOWN_DIR=%dir%
 
-if EXIST "%dir%\local-backend.dat" (
-	set JAVA_OPTS=-Xmx512m
-) else (
-	set JAVA_OPTS=-Xmx128m
-)
+REM if EXIST "%dir%\local-backend.dat" (
+REM 	set JAVA_OPTS=-Xmx512m
+REM ) else (
+REM	set JAVA_OPTS=-Xmx128m
+REM )
+
+set JAVA_OPTS=-Dconnect_timeout=12
+
 
 set X509_USER_PROXY=%USERPROFILE%\.grid\grid.proxy

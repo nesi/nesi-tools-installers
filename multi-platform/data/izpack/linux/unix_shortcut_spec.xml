@@ -46,6 +46,26 @@
      <createForPack name="Virtual Screening Client"/>
    </shortcut>
 
+     <shortcut
+     name="Phyml GUI"
+     programGroup="yes"
+     desktop="yes"
+     applications="no"
+     startMenu="no"
+     startup="no"
+     target="$INSTALL_PATH/bin/phyml-grid"
+     commandLine=""
+     description="A GUI to submit and manage phyml jobs to the NeSI cluster."
+     workingDirectory="$INSTALL_PATH/bin"
+	 iconFile="$INSTALL_PATH/resources/grisu-icon.png"
+     iconIndex="0"
+     type="Application"
+     encoding="UTF-8"
+     terminal="false"
+     KdeSubstUID="false"
+     initialState="normal">
+     <createForPack name="Phyml-grid client"/>
+   </shortcut>
     <shortcut
             name="iDrop"
             programGroup="yes"

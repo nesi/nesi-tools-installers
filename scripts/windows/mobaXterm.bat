@@ -18,7 +18,7 @@ if NOT EXIST "%moba_exe_location_target%" (
 )
 
 @echo Checking for updates. This might take a while...
-%JAVA_EXE% -jar "%GRISU_HOME%\resources\getdown-client.jar" "%grisu_dir%" update
+%JAVA_EXE% -Dconnect_timeout=12 -jar "%GRISU_HOME%\resources\getdown-client.jar" "%grisu_dir%" update
 
 REM if NOT EXIST "%dir%\MobaXterm.ini" (
 
