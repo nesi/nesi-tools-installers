@@ -1,7 +1,7 @@
 #! /bin/bash
 
 LAUNCH_DIR=`dirname "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"`
-source "$LAUNCH_DIR/launch/prepare_cli.sh" "$@"
+source "$LAUNCH_DIR/launch/prepare_gui.sh" "$@"
 
 MAIN_CLASS="Grisu"
 
