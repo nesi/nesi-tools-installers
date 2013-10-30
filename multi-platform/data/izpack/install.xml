@@ -429,6 +429,46 @@
 
     </pack>
 
+    <pack name="App-manage" required="no" preselected="yes">
+      <description>Admin package (you most likely don't need this)
+      </description>
+
+      <file src="scripts/linux/app-manage" targetdir="$INSTALL_PATH/bin">
+	<os name="Linux" />
+      </file>
+      <executable targetfile="$INSTALL_PATH/bin/app-manage" keep="true"
+		  stage="never">
+	<os name="Linux" />
+      </executable>
+
+      <file os="windows" src="scripts/windows/app-manage.bat" targetdir="$INSTALL_PATH/bin">
+	<os family="windows" />
+      </file>
+
+      <file src="mac/apps/app-manage/App-manage.app/Contents/Info.plist" targetdir="$INSTALL_PATH/App-manage.app/Contents">
+	<os name="Mac OS X" />
+      </file>
+      <file src="mac/apps/app-manage/App-manage.app/Contents/Resources/icon.icns" targetdir="$INSTALL_PATH/App-manage.app/Contents/Resources">
+	<os name="Mac OS X" />
+      </file>
+      <file src="mac/apps/app-manage/App-manage.app/Contents/MacOS/app-manage-wrapper.sh" targetdir="$INSTALL_PATH/App-manage.app/Contents/MacOS">
+	<os name="Mac OS X" />
+      </file>
+      <executable
+	  targetfile="$INSTALL_PATH/App-manage.app/Contents/MacOS/app-manage-wrapper.sh"
+	  keep="true" stage="never">
+	<os name="Mac OS X" />
+      </executable>
+      <file src="scripts/mac/app-manage" targetdir="/usr/bin">
+	<os name="Mac OS X" />
+      </file>
+      <executable targetfile="/usr/bin/app-manage" keep="true"
+		  stage="never">
+	<os name="Mac OS X" />
+      </executable>
+
+    </pack>
+
     <pack name="iDrop" required="no" preselected="no">
       <description>DataFabric desktop client</description>
 
