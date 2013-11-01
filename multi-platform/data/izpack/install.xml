@@ -429,46 +429,6 @@
 
     </pack>
 
-    <pack name="App-manage" required="no" preselected="yes">
-      <description>Admin package (you most likely don't need this)
-      </description>
-
-      <file src="scripts/linux/app-manage" targetdir="$INSTALL_PATH/bin">
-	<os name="Linux" />
-      </file>
-      <executable targetfile="$INSTALL_PATH/bin/app-manage" keep="true"
-		  stage="never">
-	<os name="Linux" />
-      </executable>
-
-      <file os="windows" src="scripts/windows/app-manage.bat" targetdir="$INSTALL_PATH/bin">
-	<os family="windows" />
-      </file>
-
-      <file src="mac/apps/app-manage/App-manage.app/Contents/Info.plist" targetdir="$INSTALL_PATH/App-manage.app/Contents">
-	<os name="Mac OS X" />
-      </file>
-      <file src="mac/apps/app-manage/App-manage.app/Contents/Resources/icon.icns" targetdir="$INSTALL_PATH/App-manage.app/Contents/Resources">
-	<os name="Mac OS X" />
-      </file>
-      <file src="mac/apps/app-manage/App-manage.app/Contents/MacOS/app-manage-wrapper.sh" targetdir="$INSTALL_PATH/App-manage.app/Contents/MacOS">
-	<os name="Mac OS X" />
-      </file>
-      <executable
-	  targetfile="$INSTALL_PATH/App-manage.app/Contents/MacOS/app-manage-wrapper.sh"
-	  keep="true" stage="never">
-	<os name="Mac OS X" />
-      </executable>
-      <file src="scripts/mac/app-manage" targetdir="/usr/bin">
-	<os name="Mac OS X" />
-      </file>
-      <executable targetfile="/usr/bin/app-manage" keep="true"
-		  stage="never">
-	<os name="Mac OS X" />
-      </executable>
-
-    </pack>
-
     <pack name="iDrop" required="no" preselected="no">
       <description>DataFabric desktop client</description>
 
@@ -523,6 +483,94 @@
           keep="true" stage="never">
         <os name="Mac OS X" />
       </executable>
+
+    </pack>
+
+    <pack name="Grython" required="no" preselected="no">
+      <description>Enables the use of jython scripts to access the grid
+      </description>
+
+      <file src="scripts/linux/grython" targetdir="$INSTALL_PATH/bin">
+	<os name="Linux" />
+      </file>
+      <executable targetfile="$INSTALL_PATH/bin/grython" keep="true"
+		  stage="never">
+	<os name="Linux" />
+      </executable>
+
+      <file os="windows" src="scripts/windows/grython.bat" targetdir="$INSTALL_PATH/bin">
+	<os family="windows" />
+      </file>
+
+      <file src="mac/apps/grython/Grython.app/Contents/Info.plist" targetdir="$INSTALL_PATH/Grython.app/Contents">
+	<os name="Mac OS X" />
+      </file>
+      <file src="mac/apps/grython/Grython.app/Contents/Resources/icon.icns" targetdir="$INSTALL_PATH/Grython.app/Contents/Resources">
+	<os name="Mac OS X" />
+      </file>
+      <file src="mac/apps/grython/Grython.app/Contents/MacOS/grython-wrapper.sh" targetdir="$INSTALL_PATH/Grython.app/Contents/MacOS">
+	<os name="Mac OS X" />
+      </file>
+      <executable
+	  targetfile="$INSTALL_PATH/Grython.app/Contents/MacOS/grython-wrapper.sh"
+	  keep="true" stage="never">
+	<os name="Mac OS X" />
+      </executable>
+      <file src="scripts/mac/grython" targetdir="/usr/bin">
+	<os name="Mac OS X" />
+      </file>
+      <executable targetfile="/usr/bin/grython" keep="true"
+		  stage="never">
+	<os name="Mac OS X" />
+      </executable>
+
+    </pack>
+
+    <pack name="Phyml-grid client" required="no" preselected="no">
+      <description>GUI to submit and monitor virtual screening jobs
+      </description>
+
+      <file src="scripts/linux/phyml-grid" targetdir="$INSTALL_PATH/bin">
+	<os name="Linux" />
+      </file>
+      <executable targetfile="$INSTALL_PATH/bin/phyml-grid" keep="true"
+		  stage="never">
+	<os name="Linux" />
+      </executable>
+
+
+      <file os="windows" src="scripts/windows/phyml-grid.bat" targetdir="$INSTALL_PATH/bin">
+	<os family="windows" />
+      </file>
+      <file os="windows" src="scripts/windows/prepare_phyml.bat" targetdir="$INSTALL_PATH/bin">
+	<os family="windows" />
+      </file>
+      <file os="windows" src="scripts/windows/phyml-grid.vbs" targetdir="$INSTALL_PATH/bin">
+	<os family="windows" />
+      </file>
+
+      <file src="mac/apps/phyml-grid/phyml-grid.app/Contents/Info.plist" targetdir="$INSTALL_PATH/phyml-grid.app/Contents">
+	<os name="Mac OS X" />
+      </file>
+      <file src="mac/apps/phyml-grid/phyml-grid.app/Contents/Resources/icon.icns" targetdir="$INSTALL_PATH/phyml-grid.app/Contents/Resources">
+	<os name="Mac OS X" />
+      </file>
+      <file src="mac/apps/phyml-grid/phyml-grid.app/Contents/MacOS/phyml-grid-wrapper.sh" targetdir="$INSTALL_PATH/phyml-grid.app/Contents/MacOS">
+	<os name="Mac OS X" />
+      </file>
+      <executable
+	  targetfile="$INSTALL_PATH/phyml-grid.app/Contents/MacOS/phyml-grid-wrapper.sh"
+	  keep="true" stage="never">
+	<os name="Mac OS X" />
+      </executable>
+      <file src="scripts/mac/phyml-grid" targetdir="/usr/bin">
+	<os name="Mac OS X" />
+      </file>
+      <executable targetfile="/usr/bin/phyml-grid" keep="true"
+		  stage="never">
+	<os name="Mac OS X" />
+      </executable>
+
 
     </pack>
 
@@ -698,6 +746,46 @@
 		  stage="never">
 	<os name="Mac OS X" />
       </executable>
+    </pack>
+
+
+    <pack name="App-manage" required="no" preselected="no">
+      <description>Admin package (you most likely don't need this)
+      </description>
+
+      <file src="scripts/linux/app-manage" targetdir="$INSTALL_PATH/bin">
+	<os name="Linux" />
+      </file>
+      <executable targetfile="$INSTALL_PATH/bin/app-manage" keep="true"
+		  stage="never">
+	<os name="Linux" />
+      </executable>
+
+      <file os="windows" src="scripts/windows/app-manage.bat" targetdir="$INSTALL_PATH/bin">
+	<os family="windows" />
+      </file>
+
+      <file src="mac/apps/app-manage/App-manage.app/Contents/Info.plist" targetdir="$INSTALL_PATH/App-manage.app/Contents">
+	<os name="Mac OS X" />
+      </file>
+      <file src="mac/apps/app-manage/App-manage.app/Contents/Resources/icon.icns" targetdir="$INSTALL_PATH/App-manage.app/Contents/Resources">
+	<os name="Mac OS X" />
+      </file>
+      <file src="mac/apps/app-manage/App-manage.app/Contents/MacOS/app-manage-wrapper.sh" targetdir="$INSTALL_PATH/App-manage.app/Contents/MacOS">
+	<os name="Mac OS X" />
+      </file>
+      <executable
+	  targetfile="$INSTALL_PATH/App-manage.app/Contents/MacOS/app-manage-wrapper.sh"
+	  keep="true" stage="never">
+	<os name="Mac OS X" />
+      </executable>
+      <file src="scripts/mac/app-manage" targetdir="/usr/bin">
+	<os name="Mac OS X" />
+      </file>
+      <executable targetfile="/usr/bin/app-manage" keep="true"
+		  stage="never">
+	<os name="Mac OS X" />
+      </executable>
 
     </pack>
 
@@ -778,93 +866,6 @@
 
     <!-- 		</pack> -->
 
-    <pack name="Grython" required="no" preselected="no">
-      <description>Enables the use of jython scripts to access the grid
-      </description>
-
-      <file src="scripts/linux/grython" targetdir="$INSTALL_PATH/bin">
-	<os name="Linux" />
-      </file>
-      <executable targetfile="$INSTALL_PATH/bin/grython" keep="true"
-		  stage="never">
-	<os name="Linux" />
-      </executable>
-
-      <file os="windows" src="scripts/windows/grython.bat" targetdir="$INSTALL_PATH/bin">
-	<os family="windows" />
-      </file>
-
-      <file src="mac/apps/grython/Grython.app/Contents/Info.plist" targetdir="$INSTALL_PATH/Grython.app/Contents">
-	<os name="Mac OS X" />
-      </file>
-      <file src="mac/apps/grython/Grython.app/Contents/Resources/icon.icns" targetdir="$INSTALL_PATH/Grython.app/Contents/Resources">
-	<os name="Mac OS X" />
-      </file>
-      <file src="mac/apps/grython/Grython.app/Contents/MacOS/grython-wrapper.sh" targetdir="$INSTALL_PATH/Grython.app/Contents/MacOS">
-	<os name="Mac OS X" />
-      </file>
-      <executable
-	  targetfile="$INSTALL_PATH/Grython.app/Contents/MacOS/grython-wrapper.sh"
-	  keep="true" stage="never">
-	<os name="Mac OS X" />
-      </executable>
-      <file src="scripts/mac/grython" targetdir="/usr/bin">
-	<os name="Mac OS X" />
-      </file>
-      <executable targetfile="/usr/bin/grython" keep="true"
-		  stage="never">
-	<os name="Mac OS X" />
-      </executable>
-
-    </pack>
-
-    <pack name="Phyml-grid client" required="no" preselected="no">
-      <description>GUI to submit and monitor virtual screening jobs
-      </description>
-
-      <file src="scripts/linux/phyml-grid" targetdir="$INSTALL_PATH/bin">
-	<os name="Linux" />
-      </file>
-      <executable targetfile="$INSTALL_PATH/bin/phyml-grid" keep="true"
-		  stage="never">
-	<os name="Linux" />
-      </executable>
-
-
-      <file os="windows" src="scripts/windows/phyml-grid.bat" targetdir="$INSTALL_PATH/bin">
-	<os family="windows" />
-      </file>
-      <file os="windows" src="scripts/windows/prepare_phyml.bat" targetdir="$INSTALL_PATH/bin">
-	<os family="windows" />
-      </file>
-      <file os="windows" src="scripts/windows/phyml-grid.vbs" targetdir="$INSTALL_PATH/bin">
-	<os family="windows" />
-      </file>
-
-      <file src="mac/apps/phyml-grid/phyml-grid.app/Contents/Info.plist" targetdir="$INSTALL_PATH/phyml-grid.app/Contents">
-	<os name="Mac OS X" />
-      </file>
-      <file src="mac/apps/phyml-grid/phyml-grid.app/Contents/Resources/icon.icns" targetdir="$INSTALL_PATH/phyml-grid.app/Contents/Resources">
-	<os name="Mac OS X" />
-      </file>
-      <file src="mac/apps/phyml-grid/phyml-grid.app/Contents/MacOS/phyml-grid-wrapper.sh" targetdir="$INSTALL_PATH/phyml-grid.app/Contents/MacOS">
-	<os name="Mac OS X" />
-      </file>
-      <executable
-	  targetfile="$INSTALL_PATH/phyml-grid.app/Contents/MacOS/phyml-grid-wrapper.sh"
-	  keep="true" stage="never">
-	<os name="Mac OS X" />
-      </executable>
-      <file src="scripts/mac/phyml-grid" targetdir="/usr/bin">
-	<os name="Mac OS X" />
-      </file>
-      <executable targetfile="/usr/bin/phyml-grid" keep="true"
-		  stage="never">
-	<os name="Mac OS X" />
-      </executable>
-
-
-    </pack>
     <!--<pack name="Virtual Screening Client" required="no" preselected="no">-->
     <!--<description>GUI to submit and monitor virtual screening jobs-->
     <!--</description>-->
