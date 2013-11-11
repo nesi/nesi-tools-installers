@@ -28,7 +28,7 @@ else
     if [[ ( ! -f "$timestamp_file" ) || ( -n `find "$timestamp_file" -mmin +1440` ) ]]
     then
 	#echo "Checking for updates. This might take a while..."
-	java -Dsilent=true -jar "$GETDOWN_DIR/getdown-client.jar" "$DIR"
+	java -Dconnect_timeout=12 -Dsilent=true -jar "$GETDOWN_DIR/getdown-client.jar" "$DIR"
     #else
 	#echo "Not checking for update, already checked today..."
     fi
