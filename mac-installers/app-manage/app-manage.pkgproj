@@ -139,7 +139,7 @@
 										<key>GID</key>
 										<integer>80</integer>
 										<key>PATH</key>
-										<string>grisu</string>
+										<string>app-manage</string>
 										<key>PATH_TYPE</key>
 										<integer>0</integer>
 										<key>PERMISSIONS</key>
@@ -544,7 +544,7 @@
 										<key>GID</key>
 										<integer>0</integer>
 										<key>PATH</key>
-										<string>../../scripts/mac/grisu</string>
+										<string>../../scripts/mac/app-manage</string>
 										<key>PATH_TYPE</key>
 										<integer>1</integer>
 										<key>PERMISSIONS</key>
@@ -617,7 +617,7 @@
 			<key>CONCLUSION_ACTION</key>
 			<integer>0</integer>
 			<key>IDENTIFIER</key>
-			<string>nz.org.nesi.pkg.grisucli</string>
+			<string>nz.org.nesi.pkg.app-manage</string>
 			<key>OVERWRITE_PERMISSIONS</key>
 			<false/>
 			<key>VERSION</key>
@@ -635,7 +635,7 @@
 			ZW50LVN0eWxlLVR5cGUiIGNvbnRlbnQ9InRleHQvY3NzIj4KPHRp
 			dGxlPjwvdGl0bGU+CjxtZXRhIG5hbWU9IkdlbmVyYXRvciIgY29u
 			dGVudD0iQ29jb2EgSFRNTCBXcml0ZXIiPgo8bWV0YSBuYW1lPSJD
-			b2NvYVZlcnNpb24iIGNvbnRlbnQ9IjExODcuMzQiPgo8c3R5bGUg
+			b2NvYVZlcnNpb24iIGNvbnRlbnQ9IjExODcuMzciPgo8c3R5bGUg
 			dHlwZT0idGV4dC9jc3MiPgo8L3N0eWxlPgo8L2hlYWQ+Cjxib2R5
 			Pgo8L2JvZHk+CjwvaHRtbD4K
 			</data>
@@ -818,7 +818,7 @@
 				</dict>
 			</array>
 			<key>NAME</key>
-			<string>grisu cli</string>
+			<string>app-manage</string>
 		</dict>
 	</dict>
 	<key>TYPE</key>
